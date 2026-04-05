@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import Sidebar from './components/Sidebar';
-import Topbar from './components/Topbar';
+import TopNav from './components/TopNav';
 import Dashboard from './components/Dashboard';
 import CoursesPage from './components/CoursesPage';
 import CRMPage from './components/CRMPage';
@@ -30,7 +29,6 @@ import AIStudio from './components/AIStudio';
 import CommunityPage from './components/CommunityPage';
 import AuthPage from './components/AuthPage';
 import StudentPlatform from './components/StudentPlatform';
-import LandingPage from './components/LandingPage';
 import AgentMockup from './components/AgentMockup';
 import { ToastProvider } from './context/ToastContext';
 import { ThemeProvider } from './context/ThemeContext';
@@ -42,8 +40,6 @@ export default function App() {
   const [showAuth, setShowAuth] = useState(false);
   const [userRole, setUserRole] = useState<'instructor' | 'learner' | null>(null);
   const [activePage, setActivePage] = useState('community-home');
-  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
-  const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
   const [isAIStudioOpen, setIsAIStudioOpen] = useState(false);
 
   const renderPage = () => {
@@ -144,26 +140,26 @@ export default function App() {
       case 'community-following':
       case 'community-settings':
         return (
-          <CommunityPage 
-            activeTab={activePage.replace('community-', '') === 'community' ? 'home' : activePage.replace('community-', '')} 
+          <CommunityPage
+            activeTab={activePage.replace('community-', '') === 'community' ? 'home' : activePage.replace('community-', '')}
             onNavigate={setActivePage}
           />
         );
       default:
         return (
           <div className="flex flex-col items-center justify-center h-[60vh] text-center space-y-4">
-            <div className="w-20 h-20 rounded-3xl bg-linear-to-br from-gray-100 to-gray-200 flex items-center justify-center text-4xl shadow-inner">
+            <div className="w-16 h-16 rounded-2xl bg-gray-100 flex items-center justify-center text-3xl">
               🚧
             </div>
             <div>
-              <h2 className="text-xl font-extrabold text-[#1A1A2E] tracking-tight">Under Construction</h2>
-              <p className="text-sm text-[#8C90A8] mt-1 max-w-xs mx-auto">
-                The {activePage} module is currently being built. Check back soon for updates!
+              <h2 className="text-lg font-bold text-gray-900">Under Construction</h2>
+              <p className="text-sm text-gray-500 mt-1 max-w-xs mx-auto">
+                The {activePage} module is being built. Check back soon!
               </p>
             </div>
-            <button 
+            <button
               onClick={() => setActivePage('dashboard')}
-              className="btn-secondary text-xs"
+              className="px-4 py-2 text-sm font-medium text-blue-600 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors"
             >
               Back to Dashboard
             </button>
@@ -213,102 +209,69 @@ export default function App() {
   return (
     <ThemeProvider>
       <ToastProvider>
-        <div className="min-h-screen bg-background text-foreground flex overflow-x-hidden relative">
-          {/* Atmospheric Background */}
-          <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-            <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-blue-600/5 blur-[120px] animate-pulse"></div>
-            <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-indigo-600/5 blur-[150px] animate-pulse" style={{ animationDelay: '2s' }}></div>
-            <div className="absolute top-[20%] right-[10%] w-[30%] h-[30%] rounded-full bg-purple-600/5 blur-[100px] animate-pulse" style={{ animationDelay: '4s' }}></div>
-            <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-5 mix-blend-overlay"></div>
+        <div className="min-h-screen bg-gray-50 text-gray-900 flex flex-col">
+          <TopNav
+            activePage={activePage}
+            setActivePage={setActivePage}
+            onLogout={() => {
+              setIsAuthenticated(false);
+              setUserRole(null);
+            }}
+            openAI={() => setIsAIStudioOpen(true)}
+          />
+
+          <main className={cn(
+            "flex-1 w-full",
+            isCommunityPage ? "p-0" : "p-4 md:p-6 lg:p-8 max-w-7xl mx-auto w-full"
+          )}>
+            {renderPage()}
+          </main>
+
+          {/* Mobile Bottom Navigation */}
+          <div className="lg:hidden fixed bottom-0 left-0 right-0 h-14 bg-white/90 backdrop-blur-lg border-t border-gray-200 flex items-center justify-around px-2 z-40">
+            <button
+              onClick={() => setActivePage('dashboard')}
+              className={cn("flex flex-col items-center gap-0.5 py-1", activePage === 'dashboard' ? "text-blue-600" : "text-gray-400")}
+            >
+              <LayoutDashboard size={19} />
+              <span className="text-[10px] font-medium">Home</span>
+            </button>
+            <button
+              onClick={() => setActivePage('courses')}
+              className={cn("flex flex-col items-center gap-0.5 py-1", activePage.startsWith('courses') ? "text-blue-600" : "text-gray-400")}
+            >
+              <BookOpen size={19} />
+              <span className="text-[10px] font-medium">Courses</span>
+            </button>
+            <button
+              onClick={() => setActivePage('community-home')}
+              className={cn("flex flex-col items-center gap-0.5 py-1", activePage.startsWith('community') ? "text-blue-600" : "text-gray-400")}
+            >
+              <MessageSquare size={19} />
+              <span className="text-[10px] font-medium">Community</span>
+            </button>
+            <button
+              onClick={() => setActivePage('scheduler')}
+              className={cn("flex flex-col items-center gap-0.5 py-1", activePage.startsWith('scheduler') ? "text-blue-600" : "text-gray-400")}
+            >
+              <Calendar size={19} />
+              <span className="text-[10px] font-medium">Schedule</span>
+            </button>
+            <button
+              onClick={() => setActivePage('settings')}
+              className={cn("flex flex-col items-center gap-0.5 py-1", activePage === 'settings' ? "text-blue-600" : "text-gray-400")}
+            >
+              <Settings size={19} />
+              <span className="text-[10px] font-medium">Settings</span>
+            </button>
           </div>
 
-          <div className="relative z-10 flex w-full">
-            <Sidebar 
-              activePage={activePage} 
-              setActivePage={(page) => {
-                setActivePage(page);
-                setIsMobileSidebarOpen(false);
-              }} 
-              isCollapsed={isSidebarCollapsed}
-              isMobileOpen={isMobileSidebarOpen}
-              onCloseMobile={() => setIsMobileSidebarOpen(false)}
-              onLogout={() => {
-                setIsAuthenticated(false);
-                setUserRole(null);
-              }}
-            />
-            
-            <div className={cn(
-              "flex-1 flex flex-col transition-all duration-300 min-w-0",
-              isSidebarCollapsed ? "lg:ml-[68px]" : "lg:ml-[242px]"
-            )}>
-              <Topbar 
-                activePage={activePage}
-                isSidebarCollapsed={isSidebarCollapsed}
-                toggleSidebar={() => {
-                  if (window.innerWidth < 1024) {
-                    setIsMobileSidebarOpen(!isMobileSidebarOpen);
-                  } else {
-                    setIsSidebarCollapsed(!isSidebarCollapsed);
-                  }
-                }}
-                openAI={() => setIsAIStudioOpen(true)}
-              />
-              
-              <main className={cn(
-                "flex-1 w-full",
-                isCommunityPage ? "p-0" : "p-4 md:p-8 max-w-7xl mx-auto"
-              )}>
-                {renderPage()}
-              </main>
+          {/* Bottom nav spacer */}
+          <div className="h-14 lg:hidden" />
 
-              {/* Mobile Bottom Navigation */}
-              <div className="lg:hidden fixed bottom-0 left-0 right-0 h-16 bg-background/80 backdrop-blur-xl border-t border-border flex items-center justify-around px-2 z-40">
-                  <button 
-                    onClick={() => setActivePage('dashboard')}
-                    className={cn("flex flex-col items-center gap-1", activePage === 'dashboard' ? "text-primary" : "text-muted-foreground")}
-                  >
-                    <LayoutDashboard size={20} />
-                    <span className="text-[10px] font-medium">Home</span>
-                  </button>
-                  <button 
-                    onClick={() => setActivePage('courses')}
-                    className={cn("flex flex-col items-center gap-1", activePage.startsWith('courses') ? "text-primary" : "text-muted-foreground")}
-                  >
-                    <BookOpen size={20} />
-                    <span className="text-[10px] font-medium">Courses</span>
-                  </button>
-                  <button 
-                    onClick={() => setActivePage('community-home')}
-                    className={cn("flex flex-col items-center gap-1", activePage.startsWith('community') ? "text-primary" : "text-muted-foreground")}
-                  >
-                    <MessageSquare size={20} />
-                    <span className="text-[10px] font-medium">skillX</span>
-                  </button>
-                  <button 
-                    onClick={() => setActivePage('scheduler')}
-                    className={cn("flex flex-col items-center gap-1", activePage.startsWith('scheduler') ? "text-primary" : "text-muted-foreground")}
-                  >
-                    <Calendar size={20} />
-                    <span className="text-[10px] font-medium">Scheduler</span>
-                  </button>
-                  <button 
-                    onClick={() => setActivePage('settings')}
-                    className={cn("flex flex-col items-center gap-1", activePage === 'settings' ? "text-primary" : "text-muted-foreground")}
-                  >
-                    <Settings size={20} />
-                    <span className="text-[10px] font-medium">Settings</span>
-                  </button>
-                </div>
-              
-              {/* Add padding at bottom for mobile nav */}
-              <div className="h-16 lg:hidden" />
-            </div>
-          </div>
-
-          <AIStudio 
-            isOpen={isAIStudioOpen} 
-            onClose={() => setIsAIStudioOpen(false)} 
+          <AIStudio
+            isOpen={isAIStudioOpen}
+            onClose={() => setIsAIStudioOpen(false)}
           />
         </div>
       </ToastProvider>
