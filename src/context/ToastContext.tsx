@@ -39,17 +39,17 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
           <div 
             key={t.id}
             className={cn(
-              "flex items-center gap-3 px-5 py-3 rounded-xl shadow-2xl animate-in slide-in-from-bottom-2 fade-in duration-300 pointer-events-auto border border-border border-l-4 bg-card text-foreground min-w-[300px]",
-              t.type === 'success' ? "border-l-emerald-500" :
-              t.type === 'error' ? "border-l-red-500" :
-              t.type === 'warning' ? "border-l-yellow-500" : "border-l-primary"
+              "flex items-center gap-3 px-5 py-3 rounded-xl shadow-2xl animate-in slide-in-from-bottom-2 fade-in duration-300 pointer-events-auto border-l-4 bg-[#0D1023] text-white min-w-[300px]",
+              t.type === 'success' ? "border-emerald-500" :
+              t.type === 'error' ? "border-red-500" :
+              t.type === 'warning' ? "border-yellow-500" : "border-blue-500"
             )}
           >
             <div className={cn(
               "shrink-0",
               t.type === 'success' ? "text-emerald-500" :
               t.type === 'error' ? "text-red-500" :
-              t.type === 'warning' ? "text-yellow-500" : "text-primary"
+              t.type === 'warning' ? "text-yellow-500" : "text-blue-500"
             )}>
               {t.type === 'success' && <CheckCircle2 size={18} />}
               {t.type === 'error' && <XCircle size={18} />}
@@ -57,7 +57,7 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
               {t.type === 'info' && <Info size={18} />}
             </div>
             <span className="text-sm font-semibold flex-1">{t.message}</span>
-            <button onClick={() => removeToast(t.id)} className="text-muted-foreground hover:text-foreground transition-colors">
+            <button onClick={() => removeToast(t.id)} className="text-white/30 hover:text-white transition-colors">
               <X size={14} />
             </button>
           </div>

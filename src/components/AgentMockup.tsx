@@ -230,24 +230,24 @@ export default function AgentMockup({ onLoginClick }: AgentMockupProps) {
   };
 
   return (
-    <div className="min-h-screen bg-background flex flex-col items-center font-sans text-foreground selection:bg-primary/20 selection:text-primary overflow-x-hidden relative transition-colors duration-500">
+    <div className="min-h-screen bg-[#F8FAFC] flex flex-col items-center font-sans text-slate-900 selection:bg-blue-100 selection:text-blue-900 overflow-x-hidden relative transition-colors duration-500">
       {/* Atmospheric Background */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-primary/5 blur-[120px] animate-pulse"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-primary/5 blur-[150px] animate-pulse" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-[20%] right-[10%] w-[30%] h-[30%] rounded-full bg-primary/5 blur-[100px] animate-pulse" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-blue-600/5 blur-[120px] animate-pulse"></div>
+        <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-indigo-600/5 blur-[150px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-[20%] right-[10%] w-[30%] h-[30%] rounded-full bg-purple-600/5 blur-[100px] animate-pulse" style={{ animationDelay: '4s' }}></div>
         <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-5 mix-blend-overlay"></div>
       </div>
 
       {/* Top Navigation */}
       <header className="w-full p-6 md:p-8 flex justify-between items-center max-w-7xl mx-auto z-50 sticky top-0">
-        <div className="flex items-center gap-8 bg-background/5 backdrop-blur-xl border border-border rounded-2xl px-6 py-3 shadow-2xl">
+        <div className="flex items-center gap-8 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl px-6 py-3 shadow-2xl">
           <Logo variant="glass" size="md" />
           
           <div className="hidden md:block relative">
             <button 
               onClick={() => setIsDiscoverOpen(!isDiscoverOpen)}
-              className="flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground rounded-full text-[10px] font-bold hover:bg-foreground transition-all uppercase tracking-widest border border-primary shadow-lg shadow-primary/20"
+              className="flex items-center gap-2 px-5 py-2.5 bg-blue-600 text-white rounded-full text-[10px] font-bold hover:bg-black transition-all uppercase tracking-widest border border-blue-600 shadow-lg shadow-blue-600/20"
             >
               <Plus size={16} />
               Discover
@@ -262,10 +262,10 @@ export default function AgentMockup({ onLoginClick }: AgentMockupProps) {
                     initial={{ opacity: 0, y: 10, scale: 0.95 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                    className="absolute top-full left-0 mt-4 w-72 bg-card border-2 border-primary shadow-2xl z-20 overflow-hidden rounded-2xl"
+                    className="absolute top-full left-0 mt-4 w-72 bg-white border-2 border-blue-600 shadow-2xl z-20 overflow-hidden rounded-2xl"
                   >
-                    <div className="p-4 bg-primary/5 border-b border-border">
-                      <p className="text-[10px] font-bold text-primary uppercase tracking-widest">Explore SkillBloomer</p>
+                    <div className="p-4 bg-blue-50 border-b border-blue-600/10">
+                      <p className="text-[10px] font-bold text-blue-600 uppercase tracking-widest">Explore SkillBloomer</p>
                     </div>
                     <div className="py-2 max-h-[300px] overflow-y-auto custom-scrollbar">
                       {[
@@ -278,14 +278,14 @@ export default function AgentMockup({ onLoginClick }: AgentMockupProps) {
                       ].map((item, i) => (
                         <button
                           key={i}
-                          className="w-full flex items-start gap-4 px-5 py-4 hover:bg-primary/5 transition-all text-left group"
+                          className="w-full flex items-start gap-4 px-5 py-4 hover:bg-blue-50 transition-all text-left group"
                         >
-                          <div className="mt-0.5 p-2 bg-primary/5 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all rounded-lg">
+                          <div className="mt-0.5 p-2 bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all rounded-lg">
                             {item.icon}
                           </div>
                           <div>
-                            <p className="text-[10px] font-bold uppercase tracking-widest text-foreground group-hover:text-primary transition-colors">{item.label}</p>
-                            <p className="text-[9px] text-muted-foreground font-medium uppercase tracking-tight mt-0.5">{item.desc}</p>
+                            <p className="text-[10px] font-bold uppercase tracking-widest text-slate-900 group-hover:text-blue-600 transition-colors">{item.label}</p>
+                            <p className="text-[9px] text-slate-400 font-medium uppercase tracking-tight mt-0.5">{item.desc}</p>
                           </div>
                         </button>
                       ))}
@@ -299,7 +299,7 @@ export default function AgentMockup({ onLoginClick }: AgentMockupProps) {
           <div className="hidden md:block relative">
             <button 
               onClick={() => setIsAppsOpen(!isAppsOpen)}
-              className="flex items-center gap-2 px-5 py-2.5 bg-background text-muted-foreground rounded-full text-[10px] font-bold hover:bg-muted transition-all uppercase tracking-widest border border-border"
+              className="flex items-center gap-2 px-5 py-2.5 bg-slate-50 text-slate-600 rounded-full text-[10px] font-bold hover:bg-slate-100 transition-all uppercase tracking-widest border border-slate-200"
             >
               <LayoutGrid size={16} />
               Apps
@@ -314,24 +314,24 @@ export default function AgentMockup({ onLoginClick }: AgentMockupProps) {
                     initial={{ opacity: 0, y: 10, scale: 0.95 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                    className="absolute top-full left-0 mt-4 w-[640px] bg-card border-2 border-primary shadow-2xl z-20 overflow-hidden rounded-2xl"
+                    className="absolute top-full left-0 mt-4 w-[640px] bg-white border-2 border-blue-600 shadow-2xl z-20 overflow-hidden rounded-2xl"
                   >
-                    <div className="p-4 bg-primary/5 border-b border-border flex items-center justify-between">
-                      <p className="text-[10px] font-bold text-primary uppercase tracking-widest">SkillBloomer Ecosystem</p>
-                      <span className="text-[9px] font-black bg-primary text-primary-foreground px-2 py-0.5 rounded-full uppercase">20 Apps Available</span>
+                    <div className="p-4 bg-blue-50 border-b border-blue-600/10 flex items-center justify-between">
+                      <p className="text-[10px] font-bold text-blue-600 uppercase tracking-widest">SkillBloomer Ecosystem</p>
+                      <span className="text-[9px] font-black bg-blue-600 text-white px-2 py-0.5 rounded-full uppercase">20 Apps Available</span>
                     </div>
                     <div className="p-4 grid grid-cols-2 sm:grid-cols-3 gap-2 max-h-[480px] overflow-y-auto custom-scrollbar">
                       {APPS.map((app, i) => (
                         <button
                           key={i}
-                          className="flex items-start gap-3 p-3 hover:bg-primary/5 transition-all text-left group rounded-xl"
+                          className="flex items-start gap-3 p-3 hover:bg-blue-50 transition-all text-left group rounded-xl"
                         >
-                          <div className="mt-0.5 p-2 bg-primary/5 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-all rounded-lg">
+                          <div className="mt-0.5 p-2 bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all rounded-lg">
                             {app.icon}
                           </div>
                           <div>
-                            <p className="text-[10px] font-bold uppercase tracking-widest text-foreground group-hover:text-primary transition-colors line-clamp-1">{app.label}</p>
-                            <p className="text-[9px] text-muted-foreground font-medium uppercase tracking-tight mt-0.5 line-clamp-1">{app.desc}</p>
+                            <p className="text-[10px] font-bold uppercase tracking-widest text-slate-900 group-hover:text-blue-600 transition-colors line-clamp-1">{app.label}</p>
+                            <p className="text-[9px] text-slate-400 font-medium uppercase tracking-tight mt-0.5 line-clamp-1">{app.desc}</p>
                           </div>
                         </button>
                       ))}
@@ -344,10 +344,18 @@ export default function AgentMockup({ onLoginClick }: AgentMockupProps) {
         </div>
         
         <div className="flex items-center gap-4">
+          <button 
+            onClick={toggleTheme}
+            className="p-2.5 bg-slate-50 text-slate-600 rounded-full hover:bg-slate-100 transition-all border border-slate-200"
+            aria-label="Toggle theme"
+          >
+            {theme === 'light' ? <Moon size={16} /> : <Sun size={16} />}
+          </button>
+
           <div className="relative hidden sm:block">
             <button 
               onClick={() => setIsLanguageOpen(!isLanguageOpen)}
-              className="flex items-center gap-2 px-4 py-2 bg-background text-muted-foreground rounded-full text-[10px] font-bold hover:bg-muted transition-all uppercase tracking-widest border border-border"
+              className="flex items-center gap-2 px-4 py-2 bg-slate-50 text-slate-600 rounded-full text-[10px] font-bold hover:bg-slate-100 transition-all uppercase tracking-widest border border-slate-200"
             >
               <Globe size={14} />
               {currentLanguage}
@@ -362,7 +370,7 @@ export default function AgentMockup({ onLoginClick }: AgentMockupProps) {
                     initial={{ opacity: 0, y: 10, scale: 0.95 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                    className="absolute top-full right-0 mt-4 w-40 bg-card border-2 border-foreground shadow-2xl z-20 py-2 rounded-xl"
+                    className="absolute top-full right-0 mt-4 w-40 bg-white border-2 border-black shadow-2xl z-20 py-2 rounded-xl"
                   >
                     {languages.map((lang) => (
                       <button
@@ -371,10 +379,10 @@ export default function AgentMockup({ onLoginClick }: AgentMockupProps) {
                           setCurrentLanguage(lang.name);
                           setIsLanguageOpen(false);
                         }}
-                        className="w-full px-4 py-2 text-left text-[10px] font-bold uppercase tracking-widest hover:bg-primary/5 text-foreground hover:text-primary transition-colors flex items-center justify-between"
+                        className="w-full px-4 py-2 text-left text-[10px] font-bold uppercase tracking-widest hover:bg-blue-50 text-slate-900 hover:text-blue-600 transition-colors flex items-center justify-between"
                       >
                         {lang.name}
-                        {currentLanguage === lang.name && <CheckCircle2 size={12} className="text-primary" />}
+                        {currentLanguage === lang.name && <CheckCircle2 size={12} className="text-blue-600" />}
                       </button>
                     ))}
                   </motion.div>
@@ -385,7 +393,7 @@ export default function AgentMockup({ onLoginClick }: AgentMockupProps) {
 
           <button 
             onClick={onLoginClick}
-            className="px-6 py-2.5 bg-primary text-primary-foreground text-sm font-bold rounded-full hover:bg-primary/90 transition-all uppercase tracking-widest shadow-lg shadow-primary/20"
+            className="px-6 py-2.5 bg-blue-600 text-white text-sm font-bold rounded-full hover:bg-blue-700 transition-all uppercase tracking-widest shadow-lg shadow-blue-600/20"
           >
             Log in
           </button>
@@ -409,7 +417,7 @@ export default function AgentMockup({ onLoginClick }: AgentMockupProps) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
               className={cn(
-                "font-extrabold tracking-tighter text-foreground transition-all duration-700 uppercase leading-[1.1]",
+                "font-extrabold tracking-tighter text-black transition-all duration-700 uppercase leading-[1.1]",
                 aiResponse ? "text-xl md:text-2xl" : "text-4xl md:text-7xl"
               )}
             >
@@ -417,13 +425,13 @@ export default function AgentMockup({ onLoginClick }: AgentMockupProps) {
               "Search Results"
             ) : (
               <>
-                Learn <span className="text-primary relative inline-block">
+                Learn <span className="text-blue-600 relative inline-block">
                   Skills
-                  <span className="absolute bottom-1 left-0 w-full h-2 bg-primary/10 -z-10"></span>
+                  <span className="absolute bottom-1 left-0 w-full h-2 bg-blue-600/10 -z-10"></span>
                 </span> That Make <br className="hidden md:block" />
-                You <span className="text-primary relative inline-block">
+                You <span className="text-blue-600 relative inline-block">
                   Stand Out
-                  <span className="absolute bottom-1 left-0 w-full h-2 bg-primary/10 -z-10"></span>
+                  <span className="absolute bottom-1 left-0 w-full h-2 bg-blue-600/10 -z-10"></span>
                 </span>.
               </>
             )}
@@ -433,7 +441,7 @@ export default function AgentMockup({ onLoginClick }: AgentMockupProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-              className="text-xs md:text-sm text-muted-foreground font-medium max-w-2xl mx-auto leading-relaxed"
+              className="text-xs md:text-sm text-slate-500 font-medium max-w-2xl mx-auto leading-relaxed"
             >
               The AI-powered ecosystem for creators, developers, and learners to build the future together.
             </motion.p>
@@ -445,7 +453,7 @@ export default function AgentMockup({ onLoginClick }: AgentMockupProps) {
           layout
           className="w-full max-w-3xl space-y-6 relative"
         >
-          <div className="absolute -inset-10 bg-primary/5 blur-3xl rounded-full -z-10 opacity-50"></div>
+          <div className="absolute -inset-10 bg-blue-600/5 blur-3xl rounded-full -z-10 opacity-50"></div>
           <form onSubmit={handleSearch} className="flex items-center gap-3">
             <div className="flex-1 relative group">
               <input 
@@ -453,10 +461,10 @@ export default function AgentMockup({ onLoginClick }: AgentMockupProps) {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Ask SkillBloomer AI anything..."
-                className="w-full h-14 px-8 bg-card border-2 border-border rounded-[16px] text-base font-medium focus:outline-none focus:border-primary focus:ring-8 focus:ring-primary/5 transition-all placeholder:text-muted-foreground/50 shadow-2xl shadow-primary/10 text-foreground"
+                className="w-full h-14 px-8 bg-white border-2 border-slate-100 rounded-[16px] text-base font-medium focus:outline-none focus:border-blue-600 focus:ring-8 focus:ring-blue-600/5 transition-all placeholder:text-slate-300 shadow-2xl shadow-blue-600/10 text-slate-900"
               />
               <div className="absolute right-6 top-1/2 -translate-y-1/2 flex items-center gap-2">
-                <span className="hidden md:flex items-center gap-1 px-2.5 py-1.5 bg-muted border border-border rounded-md text-[10px] font-bold text-muted-foreground uppercase tracking-widest">
+                <span className="hidden md:flex items-center gap-1 px-2.5 py-1.5 bg-slate-50 border border-slate-200 rounded-md text-[10px] font-bold text-slate-400 uppercase tracking-widest">
                   <Command size={10} />
                   K
                 </span>
@@ -466,11 +474,11 @@ export default function AgentMockup({ onLoginClick }: AgentMockupProps) {
             <button 
               type="submit"
               disabled={isSearching}
-              className="w-36 h-14 bg-primary text-primary-foreground font-bold text-base rounded-2xl hover:bg-foreground transition-all shadow-xl shadow-primary/20 flex items-center justify-center gap-2 disabled:opacity-50 active:scale-[0.98] shrink-0"
+              className="w-36 h-14 bg-blue-600 text-white font-bold text-base rounded-2xl hover:bg-black transition-all shadow-xl shadow-blue-600/20 flex items-center justify-center gap-2 disabled:opacity-50 active:scale-[0.98] shrink-0"
             >
               {isSearching ? (
                 <div className="flex items-center gap-2">
-                  <div className="w-5 h-5 border-2 border-primary-foreground/30 border-t-primary-foreground rounded-full animate-spin"></div>
+                  <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
                 </div>
               ) : (
                 <>
@@ -487,7 +495,7 @@ export default function AgentMockup({ onLoginClick }: AgentMockupProps) {
               {['All', 'Courses', 'Webinars', 'Live Classes', 'Colleges', 'Masters', 'Jobs', 'AI Tools'].map((cat) => (
                 <button 
                   key={cat}
-                  className="px-5 py-2 bg-card text-muted-foreground text-[10px] font-bold rounded-full border border-border hover:border-primary hover:text-primary transition-all uppercase tracking-widest shadow-sm"
+                  className="px-5 py-2 bg-white text-slate-600 text-[10px] font-bold rounded-full border border-slate-200 hover:border-blue-600 hover:text-blue-600 transition-all uppercase tracking-widest shadow-sm"
                 >
                   {cat}
                 </button>
@@ -508,42 +516,42 @@ export default function AgentMockup({ onLoginClick }: AgentMockupProps) {
               {/* Communities */}
               <div className="space-y-8 md:space-y-10">
                 <div className="flex items-center justify-between px-2">
-                  <h3 className="text-2xl md:text-3xl font-black text-foreground uppercase tracking-tighter flex items-center gap-3">
-                    <Users size={24} className="text-primary" />
-                    Featured <span className="text-primary">Communities</span>
+                  <h3 className="text-2xl md:text-3xl font-black text-slate-900 uppercase tracking-tighter flex items-center gap-3">
+                    <Users size={24} className="text-blue-600" />
+                    Featured <span className="text-blue-600">Communities</span>
                   </h3>
-                  <button className="text-[10px] font-bold text-primary uppercase tracking-widest hover:underline">View All</button>
+                  <button className="text-[10px] font-bold text-blue-600 uppercase tracking-widest hover:underline">View All</button>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 max-h-[600px] overflow-y-auto custom-scrollbar pr-4">
                   {COMMUNITY_GROUPS.slice(0, 4).map((group, idx) => (
                     <div 
                       key={group.id} 
-                      className="glass-card glow-blue rounded-[2rem] p-6 md:p-8 hover:border-primary hover:shadow-2xl hover:shadow-primary/20 transition-all group cursor-pointer text-left flex flex-col sm:flex-row gap-6 md:gap-8"
+                      className="glass-card glow-blue rounded-[2rem] p-6 md:p-8 hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-600/20 transition-all group cursor-pointer text-left flex flex-col sm:flex-row gap-6 md:gap-8"
                     >
-                      <div className="w-full sm:w-40 md:w-48 aspect-square rounded-2xl md:rounded-3xl overflow-hidden shrink-0 bg-muted">
+                      <div className="w-full sm:w-40 md:w-48 aspect-square rounded-2xl md:rounded-3xl overflow-hidden shrink-0 bg-slate-100">
                         <img src={group.image} alt={group.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" referrerPolicy="no-referrer" />
                       </div>
                       <div className="flex flex-col justify-between py-1 flex-1">
                         <div>
                           <div className="flex items-center justify-between mb-3 md:mb-4">
-                            <span className="text-[9px] md:text-[10px] font-bold text-primary bg-primary/5 px-2.5 py-1 rounded-full uppercase tracking-widest">{group.category}</span>
-                            <div className="flex items-center gap-1.5 text-muted-foreground">
-                              <Users size={12} className="text-primary" />
-                              <span className="text-[9px] md:text-[10px] font-bold text-foreground">{group.members}</span>
+                            <span className="text-[9px] md:text-[10px] font-bold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-full uppercase tracking-widest">{group.category}</span>
+                            <div className="flex items-center gap-1.5 text-slate-400">
+                              <Users size={12} className="text-blue-600" />
+                              <span className="text-[9px] md:text-[10px] font-bold text-slate-900">{group.members}</span>
                             </div>
                           </div>
-                          <h4 className="font-bold text-foreground text-lg md:text-xl mb-2 md:mb-3 leading-tight group-hover:text-primary transition-colors uppercase tracking-tight">{group.name}</h4>
-                          <p className="text-[11px] md:text-xs text-muted-foreground line-clamp-2 mb-4 leading-relaxed font-medium">{group.description}</p>
+                          <h4 className="font-bold text-slate-900 text-lg md:text-xl mb-2 md:mb-3 leading-tight group-hover:text-blue-600 transition-colors uppercase tracking-tight">{group.name}</h4>
+                          <p className="text-[11px] md:text-xs text-slate-500 line-clamp-2 mb-4 leading-relaxed font-medium">{group.description}</p>
                         </div>
-                        <div className="flex items-center justify-between mt-auto pt-4 border-t border-border">
+                        <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-50">
                           <div className="flex -space-x-2">
                             {[1,2,3].map(i => (
-                              <div key={i} className="w-7 h-7 md:w-8 md:h-8 rounded-full border-2 border-background bg-primary/10 flex items-center justify-center text-[9px] md:text-[10px] font-bold text-primary">
+                              <div key={i} className="w-7 h-7 md:w-8 md:h-8 rounded-full border-2 border-white bg-blue-100 flex items-center justify-center text-[9px] md:text-[10px] font-bold text-blue-600">
                                 {String.fromCharCode(64 + i)}
                               </div>
                             ))}
                           </div>
-                          <ArrowUpRight size={18} className="text-muted-foreground/30 group-hover:text-primary transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />
+                          <ArrowUpRight size={18} className="text-slate-300 group-hover:text-blue-600 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />
                         </div>
                       </div>
                     </div>
@@ -554,37 +562,37 @@ export default function AgentMockup({ onLoginClick }: AgentMockupProps) {
               {/* Webinars & Live Classes */}
               <div className="space-y-5">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-xs font-bold text-foreground uppercase tracking-widest flex items-center gap-2">
-                    <Video size={16} className="text-primary" />
+                  <h3 className="text-xs font-bold text-slate-900 uppercase tracking-widest flex items-center gap-2">
+                    <Video size={16} className="text-blue-600" />
                     Upcoming Webinars & Live Classes
                   </h3>
-                  <button className="text-[10px] font-bold text-primary uppercase tracking-widest hover:underline">View All</button>
+                  <button className="text-[10px] font-bold text-blue-600 uppercase tracking-widest hover:underline">View All</button>
                 </div>
                 <div className="grid grid-cols-1 gap-6 md:gap-8">
                   {(PUBLISHED_CONTENT.filter(i => i.type === 'webinar' || i.type === 'live-class') as any[]).slice(0, 2).map(item => (
-                    <div key={item.id} className="flex flex-col md:flex-row gap-6 md:gap-8 glass-card glow-blue rounded-[2rem] p-6 md:p-8 hover:border-primary hover:shadow-2xl hover:shadow-primary/20 transition-all group cursor-pointer text-left">
-                      <div className="w-full md:w-64 aspect-video rounded-2xl overflow-hidden shrink-0 bg-muted">
+                    <div key={item.id} className="flex flex-col md:flex-row gap-6 md:gap-8 glass-card glow-blue rounded-[2rem] p-6 md:p-8 hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-600/20 transition-all group cursor-pointer text-left">
+                      <div className="w-full md:w-64 aspect-video rounded-2xl overflow-hidden shrink-0 bg-slate-100">
                         <img src={item.thumbnail} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-1000" referrerPolicy="no-referrer" />
                       </div>
                       <div className="flex flex-col justify-between py-1 flex-1">
                         <div className="space-y-3 md:space-y-4">
                           <div className="flex items-center gap-3">
-                            <span className="px-3 py-1 bg-primary text-primary-foreground text-[9px] md:text-[10px] font-bold uppercase tracking-widest rounded-full">{item.type}</span>
-                            <span className="w-1 h-1 bg-border rounded-full" />
-                            <span className="text-[9px] md:text-[10px] font-bold text-muted-foreground uppercase tracking-widest">{item.category}</span>
+                            <span className="px-3 py-1 bg-blue-600 text-white text-[9px] md:text-[10px] font-bold uppercase tracking-widest rounded-full">{item.type}</span>
+                            <span className="w-1 h-1 bg-slate-200 rounded-full" />
+                            <span className="text-[9px] md:text-[10px] font-bold text-slate-400 uppercase tracking-widest">{item.category}</span>
                           </div>
-                          <h4 className="font-bold text-foreground text-xl md:text-2xl leading-tight group-hover:text-primary transition-colors uppercase tracking-tight">{item.title}</h4>
-                          <p className="text-[11px] md:text-sm text-muted-foreground leading-relaxed max-w-2xl font-medium">Join this exclusive session to deep dive into {item.title.toLowerCase()} with industry experts. Learn practical strategies and gain hands-on experience in real-time.</p>
+                          <h4 className="font-bold text-slate-900 text-xl md:text-2xl leading-tight group-hover:text-blue-600 transition-colors uppercase tracking-tight">{item.title}</h4>
+                          <p className="text-[11px] md:text-sm text-slate-500 leading-relaxed max-w-2xl font-medium">Join this exclusive session to deep dive into {item.title.toLowerCase()} with industry experts. Learn practical strategies and gain hands-on experience in real-time.</p>
                         </div>
-                        <div className="flex items-center justify-between mt-6 md:mt-8 pt-4 md:pt-6 border-t border-border">
+                        <div className="flex items-center justify-between mt-6 md:mt-8 pt-4 md:pt-6 border-t border-slate-50">
                           <div className="flex items-center gap-3 md:gap-4">
-                            <div className="w-8 h-8 md:w-10 md:h-10 bg-muted rounded-full flex items-center justify-center text-[10px] font-bold border border-border">{item.authorAvatar}</div>
+                            <div className="w-8 h-8 md:w-10 md:h-10 bg-slate-100 rounded-full flex items-center justify-center text-[10px] font-bold border border-slate-200">{item.authorAvatar}</div>
                             <div className="flex flex-col">
-                              <span className="text-[11px] md:text-xs font-bold text-foreground">{item.author}</span>
-                              <span className="text-[9px] md:text-[10px] text-muted-foreground font-bold uppercase tracking-widest">Expert Instructor</span>
+                              <span className="text-[11px] md:text-xs font-bold text-slate-900">{item.author}</span>
+                              <span className="text-[9px] md:text-[10px] text-slate-400 font-bold uppercase tracking-widest">Expert Instructor</span>
                             </div>
                           </div>
-                          <button className="px-5 py-2.5 md:px-6 md:py-3 bg-primary/5 text-primary font-bold text-[9px] md:text-[10px] uppercase tracking-widest hover:bg-primary hover:text-primary-foreground transition-all rounded-full">Register Now</button>
+                          <button className="px-5 py-2.5 md:px-6 md:py-3 bg-blue-50 text-blue-600 font-bold text-[9px] md:text-[10px] uppercase tracking-widest hover:bg-blue-600 hover:text-white transition-all rounded-full">Register Now</button>
                         </div>
                       </div>
                     </div>
@@ -595,44 +603,44 @@ export default function AgentMockup({ onLoginClick }: AgentMockupProps) {
               {/* Popular Courses */}
               <div className="space-y-5">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-xs font-bold text-foreground uppercase tracking-widest flex items-center gap-2">
-                    <BookOpen size={16} className="text-primary" />
+                  <h3 className="text-xs font-bold text-slate-900 uppercase tracking-widest flex items-center gap-2">
+                    <BookOpen size={16} className="text-blue-600" />
                     Popular Courses
                   </h3>
-                  <button className="text-[10px] font-bold text-primary uppercase tracking-widest hover:underline">View All</button>
+                  <button className="text-[10px] font-bold text-blue-600 uppercase tracking-widest hover:underline">View All</button>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-h-[600px] overflow-y-auto custom-scrollbar pr-4">
                   {(PUBLISHED_CONTENT.filter(i => i.type === 'course') as any[]).slice(0, 4).map(course => (
-                    <div key={course.id} className="glass-card glow-blue rounded-[2rem] p-6 md:p-8 hover:border-primary hover:shadow-2xl hover:shadow-primary/20 transition-all group cursor-pointer text-left flex flex-col">
-                      <div className="w-full aspect-video rounded-[1.5rem] overflow-hidden mb-6 md:mb-8 bg-muted shadow-inner">
+                    <div key={course.id} className="glass-card glow-blue rounded-[2rem] p-6 md:p-8 hover:border-blue-600 hover:shadow-2xl hover:shadow-blue-600/20 transition-all group cursor-pointer text-left flex flex-col">
+                      <div className="w-full aspect-video rounded-[1.5rem] overflow-hidden mb-6 md:mb-8 bg-slate-100 shadow-inner">
                         <img src={course.thumbnail} alt={course.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" referrerPolicy="no-referrer" />
                       </div>
                       <div className="flex-1 flex flex-col">
                         <div className="flex items-center justify-between mb-3 md:mb-4">
-                          <span className="text-[9px] md:text-[10px] font-bold text-primary uppercase tracking-widest">{course.category}</span>
-                          <div className="flex items-center gap-1.5 text-accent-yellow">
+                          <span className="text-[9px] md:text-[10px] font-bold text-blue-600 uppercase tracking-widest">{course.category}</span>
+                          <div className="flex items-center gap-1.5 text-yellow-400">
                             <Star size={12} fill="currentColor" />
-                            <span className="text-[11px] md:text-xs font-bold text-foreground">{course.rating}</span>
+                            <span className="text-[11px] md:text-xs font-bold text-slate-900">{course.rating}</span>
                           </div>
                         </div>
-                        <h4 className="font-bold text-foreground text-xl md:text-2xl mb-3 md:mb-4 leading-tight group-hover:text-primary transition-colors uppercase tracking-tight">{course.title}</h4>
+                        <h4 className="font-bold text-slate-900 text-xl md:text-2xl mb-3 md:mb-4 leading-tight group-hover:text-blue-600 transition-colors uppercase tracking-tight">{course.title}</h4>
                         <div className="flex items-center gap-4 mb-6 md:mb-8">
-                          <div className="flex items-center gap-1.5 text-muted-foreground">
+                          <div className="flex items-center gap-1.5 text-slate-400">
                             <Users size={12} />
                             <span className="text-[11px] md:text-xs font-bold">{course.students} Students</span>
                           </div>
-                          <span className="w-1 h-1 bg-border rounded-full" />
-                          <div className="flex items-center gap-1.5 text-muted-foreground">
+                          <span className="w-1 h-1 bg-slate-200 rounded-full" />
+                          <div className="flex items-center gap-1.5 text-slate-400">
                             <Clock size={12} />
                             <span className="text-[11px] md:text-xs font-bold">{course.duration}</span>
                           </div>
                         </div>
-                        <div className="mt-auto flex items-center justify-between pt-4 md:pt-6 border-t border-border">
+                        <div className="mt-auto flex items-center justify-between pt-4 md:pt-6 border-t border-slate-50">
                           <div className="flex flex-col">
-                            <span className="text-[8px] md:text-[9px] font-bold text-muted-foreground uppercase tracking-widest">Course Fee</span>
-                            <span className="text-xl md:text-2xl font-bold text-foreground">{course.price}</span>
+                            <span className="text-[8px] md:text-[9px] font-bold text-slate-400 uppercase tracking-widest">Course Fee</span>
+                            <span className="text-xl md:text-2xl font-bold text-slate-900">{course.price}</span>
                           </div>
-                          <button className="px-6 py-3 md:px-8 md:py-4 bg-primary text-primary-foreground font-bold text-[10px] md:text-xs uppercase tracking-widest hover:bg-foreground transition-all shadow-lg shadow-primary/20 rounded-xl md:rounded-2xl flex items-center gap-2">
+                          <button className="px-6 py-3 md:px-8 md:py-4 bg-blue-600 text-white font-bold text-[10px] md:text-xs uppercase tracking-widest hover:bg-black transition-all shadow-lg shadow-blue-600/20 rounded-xl md:rounded-2xl flex items-center gap-2">
                             Enroll Now <Plus size={14} />
                           </button>
                         </div>
@@ -643,17 +651,17 @@ export default function AgentMockup({ onLoginClick }: AgentMockupProps) {
               </div>
 
               {/* Community Join Strip */}
-              <div className="w-full py-16 bg-primary border-y border-primary/10 overflow-hidden relative rounded-[3rem] my-12">
+              <div className="w-full py-16 bg-blue-600 border-y border-blue-600/10 overflow-hidden relative rounded-[3rem] my-12">
                 <div className="flex animate-marquee whitespace-nowrap">
                   {[...Array(10)].map((_, i) => (
                     <div key={i} className="flex items-center gap-12 px-6">
-                      <span className="text-3xl md:text-5xl font-black text-primary-foreground/20 uppercase italic tracking-tighter">CEO</span>
-                      <span className="text-3xl md:text-5xl font-black text-primary-foreground/20 uppercase italic tracking-tighter">CXO</span>
-                      <span className="text-3xl md:text-5xl font-black text-primary-foreground/20 uppercase italic tracking-tighter">TRAINER</span>
-                      <span className="text-3xl md:text-5xl font-black text-primary-foreground/20 uppercase italic tracking-tighter">CREATOR</span>
-                      <div className="flex items-center gap-4 px-8 py-3 bg-primary-foreground/10 rounded-full border border-primary-foreground/20 backdrop-blur-md">
-                        <span className="text-xs md:text-sm font-bold text-primary-foreground uppercase tracking-widest">Join Community</span>
-                        <ArrowRight size={16} className="text-primary-foreground" />
+                      <span className="text-3xl md:text-5xl font-black text-white/20 uppercase italic tracking-tighter">CEO</span>
+                      <span className="text-3xl md:text-5xl font-black text-white/20 uppercase italic tracking-tighter">CXO</span>
+                      <span className="text-3xl md:text-5xl font-black text-white/20 uppercase italic tracking-tighter">TRAINER</span>
+                      <span className="text-3xl md:text-5xl font-black text-white/20 uppercase italic tracking-tighter">CREATOR</span>
+                      <div className="flex items-center gap-4 px-8 py-3 bg-white/10 rounded-full border border-white/20 backdrop-blur-md">
+                        <span className="text-xs md:text-sm font-bold text-white uppercase tracking-widest">Join Community</span>
+                        <ArrowRight size={16} className="text-white" />
                       </div>
                     </div>
                   ))}
@@ -669,51 +677,51 @@ export default function AgentMockup({ onLoginClick }: AgentMockupProps) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
-                className="w-full text-left bg-card border border-border rounded-3xl p-8 md:p-10 shadow-sm"
+                className="w-full text-left bg-white border border-slate-200 rounded-3xl p-8 md:p-10 shadow-sm"
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-primary-foreground">
+                  <div className="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white">
                     <Bot size={20} />
                   </div>
                   <div>
-                    <h3 className="text-sm font-bold text-foreground">SkillBloomer AI</h3>
-                    <p className="text-[10px] text-muted-foreground font-bold uppercase tracking-widest">Research Assistant</p>
+                    <h3 className="text-sm font-bold text-slate-900">SkillBloomer AI</h3>
+                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest">Research Assistant</p>
                   </div>
                 </div>
 
-                <div className="prose prose-slate max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-strong:text-foreground prose-ul:list-disc prose-li:text-muted-foreground">
+                <div className="prose prose-slate max-w-none prose-headings:text-black prose-p:text-slate-600 prose-strong:text-black prose-ul:list-disc prose-li:text-slate-600">
                   <Markdown>{aiResponse}</Markdown>
                 </div>
 
-                <div className="mt-8 pt-8 border-t border-border flex flex-wrap gap-6">
+                <div className="mt-8 pt-8 border-t border-slate-200 flex flex-wrap gap-6">
                   <div className="flex flex-col">
-                    <span className="text-[9px] font-bold text-muted-foreground uppercase tracking-widest">Scanned</span>
-                    <span className="text-xs font-bold text-foreground">{PUBLISHED_CONTENT.length} Resources</span>
+                    <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Scanned</span>
+                    <span className="text-xs font-bold text-slate-900">{PUBLISHED_CONTENT.length} Resources</span>
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-[9px] font-bold text-muted-foreground uppercase tracking-widest">Modules</span>
-                    <span className="text-xs font-bold text-foreground">12+ Global</span>
+                    <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Modules</span>
+                    <span className="text-xs font-bold text-slate-900">12+ Global</span>
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-[9px] font-bold text-muted-foreground uppercase tracking-widest">Accuracy</span>
-                    <span className="text-xs font-bold text-foreground">99.9% AI-Powered</span>
+                    <span className="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Accuracy</span>
+                    <span className="text-xs font-bold text-slate-900">99.9% AI-Powered</span>
                   </div>
                 </div>
 
                 {searchResults.length > 0 && (
                   <div className="mt-10 space-y-6">
-                    <h4 className="text-xs font-bold text-foreground uppercase tracking-widest flex items-center gap-2">
-                      <Layers size={16} className="text-primary" />
+                    <h4 className="text-xs font-bold text-black uppercase tracking-widest flex items-center gap-2">
+                      <Layers size={16} className="text-blue-600" />
                       Recommended Resources
                     </h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-h-[400px] overflow-y-auto custom-scrollbar pr-2">
                       {searchResults.map((item) => (
                         <div 
                           key={item.id}
-                          className="group bg-card border border-border rounded-2xl p-4 hover:border-primary hover:shadow-lg hover:shadow-primary/5 transition-all cursor-pointer"
+                          className="group bg-white border border-slate-200 rounded-2xl p-4 hover:border-blue-600 hover:shadow-lg hover:shadow-blue-600/5 transition-all cursor-pointer"
                         >
                           <div className="flex gap-4">
-                            <div className="w-20 h-20 rounded-xl overflow-hidden shrink-0 bg-muted">
+                            <div className="w-20 h-20 rounded-xl overflow-hidden shrink-0 bg-slate-100">
                               <img 
                                 src={item.thumbnail} 
                                 alt={item.title}
@@ -723,18 +731,18 @@ export default function AgentMockup({ onLoginClick }: AgentMockupProps) {
                             </div>
                             <div className="flex-1 min-w-0">
                               <div className="flex items-center gap-2 mb-1">
-                                <span className="px-2 py-0.5 bg-primary/5 text-primary text-[10px] font-bold rounded uppercase tracking-wider flex items-center gap-1">
+                                <span className="px-2 py-0.5 bg-blue-50 text-blue-600 text-[10px] font-bold rounded uppercase tracking-wider flex items-center gap-1">
                                   {getIconForType(item.type)}
                                   {item.type}
                                 </span>
-                                <span className="text-[10px] text-muted-foreground font-medium">
+                                <span className="text-[10px] text-slate-400 font-medium">
                                   {item.category}
                                 </span>
                               </div>
-                              <h5 className="font-bold text-foreground text-xs line-clamp-2 leading-tight group-hover:text-primary transition-colors">
+                              <h5 className="font-bold text-slate-900 text-xs line-clamp-2 leading-tight group-hover:text-blue-600 transition-colors">
                                 {item.title}
                               </h5>
-                              <p className="text-[10px] text-muted-foreground mt-1 font-medium">
+                              <p className="text-[10px] text-slate-500 mt-1 font-medium">
                                 {item.author}
                               </p>
                             </div>
@@ -745,12 +753,12 @@ export default function AgentMockup({ onLoginClick }: AgentMockupProps) {
                   </div>
                 )}
 
-                <div className="mt-10 pt-8 border-t border-border flex flex-wrap gap-4">
-                  <button className="flex items-center gap-2 px-4 py-2 bg-card border border-border rounded-full text-xs font-bold text-muted-foreground hover:bg-muted transition-colors">
+                <div className="mt-10 pt-8 border-t border-slate-200 flex flex-wrap gap-4">
+                  <button className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold text-slate-600 hover:bg-slate-50 transition-colors">
                     <Plus size={14} />
                     Add to Roadmap
                   </button>
-                  <button className="flex items-center gap-2 px-4 py-2 bg-card border border-border rounded-full text-xs font-bold text-muted-foreground hover:bg-muted transition-colors">
+                  <button className="flex items-center gap-2 px-4 py-2 bg-white border border-slate-200 rounded-full text-xs font-bold text-slate-600 hover:bg-slate-50 transition-colors">
                     <Share2 size={14} />
                     Share Results
                   </button>
@@ -773,7 +781,7 @@ export default function AgentMockup({ onLoginClick }: AgentMockupProps) {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4, delay: 0.4 + (idx * 0.05) }}
-                  className="px-4 py-2 bg-muted border border-border rounded-full text-xs font-bold text-muted-foreground hover:bg-muted/80 hover:border-muted-foreground/30 transition-all flex items-center gap-2 uppercase tracking-widest"
+                  className="px-4 py-2 bg-slate-50 border border-slate-200 rounded-full text-xs font-bold text-slate-600 hover:bg-slate-100 hover:border-slate-300 transition-all flex items-center gap-2 uppercase tracking-widest"
                 >
                   <item.icon size={14} />
                   {item.label}
@@ -784,23 +792,23 @@ export default function AgentMockup({ onLoginClick }: AgentMockupProps) {
       </main>
 
       {/* Footer (Minimal) */}
-      <footer className="w-full p-8 flex flex-col md:flex-row items-center justify-between text-muted-foreground text-[9px] font-bold uppercase tracking-[0.2em] max-w-7xl mx-auto mt-auto">
+      <footer className="w-full p-8 flex flex-col md:flex-row items-center justify-between text-slate-400 text-[9px] font-bold uppercase tracking-[0.2em] max-w-7xl mx-auto mt-auto">
         <div className="flex items-center gap-6 mb-4 md:mb-0">
-          <a href="#" className="hover:text-foreground transition-colors">Privacy</a>
-          <a href="#" className="hover:text-foreground transition-colors">Terms</a>
-          <a href="#" className="hover:text-foreground transition-colors">Contact</a>
+          <a href="#" className="hover:text-slate-900 transition-colors">Privacy</a>
+          <a href="#" className="hover:text-slate-900 transition-colors">Terms</a>
+          <a href="#" className="hover:text-slate-900 transition-colors">Contact</a>
         </div>
         <div className="flex items-center gap-2">
           <span>© 2026 SkillBloomer.com</span>
-          <span className="w-1 h-1 bg-border rounded-full"></span>
+          <span className="w-1 h-1 bg-slate-200 rounded-full"></span>
           <span>Built with AI</span>
         </div>
       </footer>
 
       {/* Background with Grid and Dynamic Animation */}
-      <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden bg-background">
+      <div className="fixed inset-0 -z-10 pointer-events-none overflow-hidden bg-white dark:bg-black">
         {/* Subtle Grid Pattern */}
-        <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
+        <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.05]" style={{ backgroundImage: 'radial-gradient(#000 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
         
         {/* Dynamic Animated Gradients */}
         <motion.div 
@@ -814,7 +822,7 @@ export default function AgentMockup({ onLoginClick }: AgentMockupProps) {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          className="absolute top-[-10%] left-[-10%] w-[70%] h-[70%] bg-primary/5 rounded-full blur-[150px] opacity-40"
+          className="absolute top-[-10%] left-[-10%] w-[70%] h-[70%] bg-blue-100 dark:bg-blue-900/20 rounded-full blur-[150px] opacity-40"
         ></motion.div>
         
         <motion.div 
@@ -828,7 +836,7 @@ export default function AgentMockup({ onLoginClick }: AgentMockupProps) {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-primary/5 rounded-full blur-[150px] opacity-40"
+          className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] bg-indigo-50 dark:bg-indigo-900/20 rounded-full blur-[150px] opacity-40"
         ></motion.div>
 
         <motion.div 
@@ -840,7 +848,7 @@ export default function AgentMockup({ onLoginClick }: AgentMockupProps) {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          className="absolute top-[20%] right-[10%] w-[40%] h-[40%] bg-accent-yellow/5 rounded-full blur-[120px] opacity-30"
+          className="absolute top-[20%] right-[10%] w-[40%] h-[40%] bg-yellow-50 dark:bg-yellow-900/10 rounded-full blur-[120px] opacity-30"
         ></motion.div>
 
         {/* Floating Particles */}
@@ -862,7 +870,7 @@ export default function AgentMockup({ onLoginClick }: AgentMockupProps) {
               ease: "linear",
               delay: Math.random() * 10
             }}
-            className="absolute w-1 h-1 bg-primary/20 rounded-full"
+            className="absolute w-1 h-1 bg-blue-400 dark:bg-blue-500 rounded-full"
           />
         ))}
       </div>
