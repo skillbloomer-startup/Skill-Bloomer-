@@ -17,12 +17,13 @@
   --color-accent-yellow: oklch(0.85 0.15 90);
 
   --shadow-glass: var(--glass-shadow);
-  
+
   --tracking-tightest: -0.05em;
   --tracking-tighter: -0.03em;
 }
 
 @layer utilities {
+  /* Glass utilities — used by StudentPlatform and AgentMockup */
   .glass-card {
     @apply bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_0_20px_rgba(59,130,246,0.1)];
   }
@@ -40,7 +41,6 @@
     100% { transform: translateX(-50%); }
   }
 
-  /* Apple-standard glass utility - Very subtle and refined */
   .glass-bg {
     background-image: var(--glass-bg);
     background-color: transparent;
@@ -49,7 +49,7 @@
     border: 0.5px solid var(--glass-border);
     box-shadow: var(--glass-shadow);
   }
-  
+
   .glass-frosted {
     background-image: var(--glass-frosted-bg) !important;
     background-color: transparent !important;
@@ -58,7 +58,7 @@
     border: 0.5px solid var(--glass-frosted-border) !important;
     box-shadow: var(--glass-frosted-shadow) !important;
   }
-  
+
   .glass-fluted {
     background-image: var(--glass-fluted-pattern), var(--glass-bg) !important;
     background-color: transparent !important;
@@ -67,7 +67,7 @@
     border: 0.5px solid var(--glass-border) !important;
     box-shadow: var(--glass-shadow) !important;
   }
-  
+
   .glass-crystal {
     position: relative;
     background-color: var(--glass-crystal-bg) !important;
@@ -79,7 +79,7 @@
     background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.15), transparent 50%) !important;
     background-size: 200% 200% !important;
   }
-  
+
   .glass-crystal::before {
     content: '';
     position: absolute;
@@ -90,7 +90,7 @@
     pointer-events: none;
     height: 30%;
   }
-  
+
   .glass-crystal::after {
     content: '';
     position: absolute;
@@ -100,7 +100,7 @@
     opacity: 0.8;
     pointer-events: none;
   }
-  
+
   .glass-crystal:hover {
     box-shadow: var(--glass-crystal-shadow-hover) !important;
     background-position: 100% 100% !important;
@@ -112,9 +112,6 @@
     --page: #FFFFFF;
     --white: #FFFFFF;
     --card: #FFFFFF;
-    --sidebar-bg: #FFFFFF;
-    --sidebar-border: #2563eb;
-    --card-border: #2563eb;
     --text-primary: #000000;
     --text-secondary: #1e293b;
     --text-muted: #64748b;
@@ -124,35 +121,35 @@
     --yellow: #facc15;
 
     /* Glass UI Variables */
-    --glass-bg: linear-gradient(135deg, 
-      rgba(255, 255, 255, 0.15) 0%, 
+    --glass-bg: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.15) 0%,
       rgba(255, 255, 255, 0.12) 25%,
       rgba(240, 248, 255, 0.13) 50%,
       rgba(255, 255, 255, 0.11) 75%,
       rgba(230, 240, 255, 0.12) 100%
     );
     --glass-border: rgba(255, 255, 255, 0.12);
-    --glass-shadow: 
+    --glass-shadow:
       0 4px 16px rgba(0, 0, 0, 0.08),
       0 1px 4px rgba(0, 0, 0, 0.04),
       0 0 0 0.5px rgba(255, 255, 255, 0.08) inset,
       0 0 12px rgba(255, 255, 255, 0.1) inset;
-    --glass-shadow-lg: 
+    --glass-shadow-lg:
       0 8px 32px rgba(0, 0, 0, 0.1),
       0 2px 8px rgba(0, 0, 0, 0.06),
       0 0 0 0.5px rgba(255, 255, 255, 0.1) inset,
       0 0 20px rgba(255, 255, 255, 0.12) inset;
     --blur: 10px;
     --blur-frosted: 25px;
-    --glass-frosted-bg: linear-gradient(135deg, 
-      rgba(255, 255, 255, 0.25) 0%, 
+    --glass-frosted-bg: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.25) 0%,
       rgba(255, 255, 255, 0.22) 25%,
       rgba(240, 248, 255, 0.23) 50%,
       rgba(255, 255, 255, 0.21) 75%,
       rgba(230, 240, 255, 0.22) 100%
     );
     --glass-frosted-border: rgba(255, 255, 255, 0.3);
-    --glass-frosted-shadow: 
+    --glass-frosted-shadow:
       0 8px 32px rgba(0, 0, 0, 0.12),
       0 2px 8px rgba(0, 0, 0, 0.08),
       0 0 0 0.5px rgba(255, 255, 255, 0.15) inset,
@@ -167,10 +164,10 @@
     );
     --glass-crystal-bg: rgba(255, 255, 255, 0.3);
     --glass-crystal-border: rgba(255, 255, 255, 0.3);
-    --glass-crystal-shadow: 
+    --glass-crystal-shadow:
       0 0 20px rgba(0, 0, 0, 0.2),
       0 0 30px rgba(255, 255, 255, 0.1);
-    --glass-crystal-shadow-hover: 
+    --glass-crystal-shadow-hover:
       0 0 25px rgba(0, 0, 0, 0.3),
       0 0 35px rgba(255, 255, 255, 0.15);
     --blur-crystal: 2px;
@@ -201,7 +198,7 @@
   }
 
   .grid-bg {
-    background-image: 
+    background-image:
       linear-gradient(to right, rgba(37,99,235,0.05) 1px, transparent 1px),
       linear-gradient(to bottom, rgba(37,99,235,0.05) 1px, transparent 1px);
     background-size: 40px 40px;
@@ -216,18 +213,19 @@
   }
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar — neutral gray */
 ::-webkit-scrollbar {
   width: 4px;
   height: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #2563eb;
+  background: #cbd5e1;
+  border-radius: 2px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #FFFFFF;
+  background: transparent;
 }
 
 @keyframes pulse-dot {
@@ -251,14 +249,6 @@
 @theme inline {
   --font-heading: var(--font-sans);
   --font-sans: 'Geist Variable', sans-serif;
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
   --color-chart-5: var(--chart-5);
   --color-chart-4: var(--chart-4);
   --color-chart-3: var(--chart-3);
@@ -316,16 +306,4 @@
   --chart-4: oklch(0.8 0.15 100);
   --chart-5: oklch(0.6 0.15 50);
   --radius: 0.75rem;
-  --sidebar: oklch(0.98 0.01 240);
-  --sidebar-foreground: oklch(0.2 0.04 240);
-  --sidebar-primary: oklch(0.55 0.18 250);
-  --sidebar-primary-foreground: oklch(0.99 0.005 240);
-  --sidebar-accent: oklch(0.94 0.02 240);
-  --sidebar-accent-foreground: oklch(0.25 0.05 240);
-  --sidebar-border: oklch(0.9 0.02 240);
-  --sidebar-ring: oklch(0.55 0.18 250 / 0.5);
 }
-
-
-
-

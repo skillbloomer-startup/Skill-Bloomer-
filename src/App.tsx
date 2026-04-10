@@ -209,7 +209,7 @@ export default function App() {
   return (
     <ThemeProvider>
       <ToastProvider>
-        <div className="min-h-screen bg-gray-50 text-gray-900 flex flex-col">
+        <div className="min-h-screen bg-[#FAFBFC] text-gray-900 flex flex-col">
           <TopNav
             activePage={activePage}
             setActivePage={setActivePage}
@@ -228,42 +228,31 @@ export default function App() {
           </main>
 
           {/* Mobile Bottom Navigation */}
-          <div className="lg:hidden fixed bottom-0 left-0 right-0 h-14 bg-white/90 backdrop-blur-lg border-t border-gray-200 flex items-center justify-around px-2 z-40">
-            <button
-              onClick={() => setActivePage('dashboard')}
-              className={cn("flex flex-col items-center gap-0.5 py-1", activePage === 'dashboard' ? "text-blue-600" : "text-gray-400")}
-            >
-              <LayoutDashboard size={19} />
-              <span className="text-[10px] font-medium">Home</span>
-            </button>
-            <button
-              onClick={() => setActivePage('courses')}
-              className={cn("flex flex-col items-center gap-0.5 py-1", activePage.startsWith('courses') ? "text-blue-600" : "text-gray-400")}
-            >
-              <BookOpen size={19} />
-              <span className="text-[10px] font-medium">Courses</span>
-            </button>
-            <button
-              onClick={() => setActivePage('community-home')}
-              className={cn("flex flex-col items-center gap-0.5 py-1", activePage.startsWith('community') ? "text-blue-600" : "text-gray-400")}
-            >
-              <MessageSquare size={19} />
-              <span className="text-[10px] font-medium">Community</span>
-            </button>
-            <button
-              onClick={() => setActivePage('scheduler')}
-              className={cn("flex flex-col items-center gap-0.5 py-1", activePage.startsWith('scheduler') ? "text-blue-600" : "text-gray-400")}
-            >
-              <Calendar size={19} />
-              <span className="text-[10px] font-medium">Schedule</span>
-            </button>
-            <button
-              onClick={() => setActivePage('settings')}
-              className={cn("flex flex-col items-center gap-0.5 py-1", activePage === 'settings' ? "text-blue-600" : "text-gray-400")}
-            >
-              <Settings size={19} />
-              <span className="text-[10px] font-medium">Settings</span>
-            </button>
+          <div className="lg:hidden fixed bottom-0 left-0 right-0 h-14 bg-white/95 backdrop-blur-lg border-t border-gray-100 flex items-center justify-around px-2 z-40">
+            {[
+              { id: 'dashboard', icon: LayoutDashboard, label: 'Home', match: (p: string) => p === 'dashboard' },
+              { id: 'courses', icon: BookOpen, label: 'Courses', match: (p: string) => p.startsWith('courses') },
+              { id: 'community-home', icon: MessageSquare, label: 'Community', match: (p: string) => p.startsWith('community') },
+              { id: 'scheduler', icon: Calendar, label: 'Schedule', match: (p: string) => p.startsWith('scheduler') },
+              { id: 'settings', icon: Settings, label: 'Settings', match: (p: string) => p === 'settings' },
+            ].map((tab) => {
+              const isActive = tab.match(activePage);
+              const Icon = tab.icon;
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setActivePage(tab.id)}
+                  className={cn(
+                    "flex flex-col items-center gap-0.5 py-1 relative transition-colors duration-150",
+                    isActive ? "text-blue-600" : "text-gray-400"
+                  )}
+                >
+                  {isActive && <span className="absolute -top-[1px] w-6 h-0.5 bg-blue-600 rounded-full" />}
+                  <Icon size={18} />
+                  <span className="text-[10px] font-medium">{tab.label}</span>
+                </button>
+              );
+            })}
           </div>
 
           {/* Bottom nav spacer */}

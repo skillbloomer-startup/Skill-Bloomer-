@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import {
   LayoutDashboard,
   Home,
@@ -11,7 +11,6 @@ import {
   TrendingUp,
   Settings,
   ChevronDown,
-  Plus,
   Search,
   LogOut,
   Zap,
@@ -26,11 +25,8 @@ import {
   User,
   Menu,
   X,
-  MessageSquare,
-  Heart,
   Building2,
 } from 'lucide-react';
-import Logo from './Logo';
 import { cn } from '@/src/lib/utils';
 
 interface TopNavProps {
@@ -49,19 +45,17 @@ interface NavItem {
 }
 
 function DropdownMenu({
-  label,
-  icon: Icon,
   items,
   activePage,
   setActivePage,
   onClose,
+  isVisible,
 }: {
-  label: string;
-  icon: React.ElementType;
   items: NavItem[];
   activePage: string;
   setActivePage: (page: string) => void;
   onClose: () => void;
+  isVisible: boolean;
 }) {
   const [openSub, setOpenSub] = useState<string | null>(null);
   const ref = useRef<HTMLDivElement>(null);
@@ -74,9 +68,24 @@ function DropdownMenu({
     return () => document.removeEventListener('mousedown', handler);
   }, [onClose]);
 
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose();
+    };
+    document.addEventListener('keydown', handler);
+    return () => document.removeEventListener('keydown', handler);
+  }, [onClose]);
+
   return (
-    <div ref={ref} className="relative">
-      <div className="absolute top-full left-0 mt-1.5 w-60 bg-white border border-gray-200 rounded-xl shadow-lg z-50 py-1.5 max-h-[70vh] overflow-y-auto">
+    <div ref={ref} className="absolute top-full left-0 pt-1.5 z-50">
+      <div
+        className={cn(
+          'w-56 bg-white border border-gray-200 rounded-xl shadow-lg py-1 max-h-[70vh] overflow-y-auto transition-all duration-150 origin-top',
+          isVisible
+            ? 'opacity-100 scale-100 translate-y-0'
+            : 'opacity-0 scale-95 -translate-y-1 pointer-events-none'
+        )}
+      >
         {items.map((item) => {
           const isActive = activePage === item.id || activePage.startsWith(item.id + '-');
           const ItemIcon = item.icon;
@@ -95,52 +104,55 @@ function DropdownMenu({
                   }
                 }}
                 className={cn(
-                  'w-full flex items-center gap-2.5 px-3.5 py-2 text-[13px] font-medium transition-colors',
+                  'w-full flex items-center gap-2.5 px-3 py-2 text-[13px] font-medium transition-colors',
                   isActive
-                    ? 'text-blue-600 bg-blue-50'
-                    : 'text-gray-700 hover:bg-gray-50'
+                    ? 'text-blue-600 bg-blue-50/70'
+                    : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
                 )}
               >
-                <ItemIcon size={16} className={cn('shrink-0', isActive ? 'text-blue-600' : 'text-gray-400')} />
+                <ItemIcon size={15} className={cn('shrink-0', isActive ? 'text-blue-600' : 'text-gray-400')} />
                 <span className="flex-1 text-left truncate">{item.label}</span>
                 {item.badge && (
-                  <span className="text-[9px] bg-yellow-400 text-black px-1.5 py-0.5 rounded-full font-bold leading-none">
+                  <span className="text-[9px] bg-blue-100 text-blue-600 px-1.5 py-0.5 rounded font-semibold leading-none">
                     {item.badge}
                   </span>
                 )}
                 {hasSubItems && (
                   <ChevronDown
-                    size={13}
-                    className={cn('text-gray-400 transition-transform', isSubOpen && 'rotate-180')}
+                    size={12}
+                    className={cn('text-gray-400 transition-transform duration-150', isSubOpen && 'rotate-180')}
                   />
                 )}
               </button>
-              {hasSubItems && isSubOpen && (
-                <div className="py-0.5">
-                  {item.subItems!.map((sub) => (
-                    <button
-                      key={sub.id}
-                      onClick={() => {
-                        setActivePage(sub.id);
-                        onClose();
-                      }}
-                      className={cn(
-                        'w-full flex items-center gap-2 pl-10 pr-3.5 py-1.5 text-[12.5px] font-medium transition-colors',
-                        activePage === sub.id
-                          ? 'text-blue-600 bg-blue-50'
-                          : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
-                      )}
-                    >
-                      <span className="truncate">{sub.label}</span>
-                      {sub.badge && (
-                        <span className="text-[8px] bg-yellow-400 text-black px-1 rounded-full font-bold leading-none ml-auto">
-                          {sub.badge}
-                        </span>
-                      )}
-                    </button>
-                  ))}
-                </div>
-              )}
+              <div
+                className={cn(
+                  'overflow-hidden transition-all duration-150',
+                  hasSubItems && isSubOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                )}
+              >
+                {hasSubItems && item.subItems!.map((sub) => (
+                  <button
+                    key={sub.id}
+                    onClick={() => {
+                      setActivePage(sub.id);
+                      onClose();
+                    }}
+                    className={cn(
+                      'w-full flex items-center gap-2 pl-10 pr-3 py-1.5 text-[12.5px] font-medium transition-colors',
+                      activePage === sub.id
+                        ? 'text-blue-600 bg-blue-50/70'
+                        : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
+                    )}
+                  >
+                    <span className="truncate">{sub.label}</span>
+                    {sub.badge && (
+                      <span className="text-[9px] bg-blue-100 text-blue-600 px-1 rounded font-semibold leading-none ml-auto">
+                        {sub.badge}
+                      </span>
+                    )}
+                  </button>
+                ))}
+              </div>
             </div>
           );
         })}
@@ -163,6 +175,19 @@ export default function TopNav({ activePage, setActivePage, onLogout, openAI }: 
     };
     document.addEventListener('mousedown', handler);
     return () => document.removeEventListener('mousedown', handler);
+  }, []);
+
+  // Close dropdowns on Escape
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setOpenDropdown(null);
+        setIsProfileOpen(false);
+        setIsMobileMenuOpen(false);
+      }
+    };
+    document.addEventListener('keydown', handler);
+    return () => document.removeEventListener('keydown', handler);
   }, []);
 
   // Close mobile menu on page change
@@ -307,10 +332,9 @@ export default function TopNav({ activePage, setActivePage, onLogout, openAI }: 
     setMobileExpandedMenus((prev) => ({ ...prev, [id]: !prev[id] }));
   };
 
-  // Render mobile nav items
   const renderMobileNavSection = (section: { id: string; label: string; items: NavItem[] }) => (
-    <div key={section.id} className="py-2">
-      <div className="px-4 py-1.5 text-[10px] font-bold text-gray-400 uppercase tracking-wider">
+    <div key={section.id} className="py-1">
+      <div className="px-4 py-2 text-[11px] font-semibold text-gray-400 uppercase tracking-wider">
         {section.label}
       </div>
       {section.items.map((item) => {
@@ -331,43 +355,46 @@ export default function TopNav({ activePage, setActivePage, onLogout, openAI }: 
               }}
               className={cn(
                 'w-full flex items-center gap-3 px-4 py-2.5 text-[13px] font-medium transition-colors',
-                isActive ? 'text-blue-600 bg-blue-50' : 'text-gray-700 hover:bg-gray-50'
+                isActive ? 'text-blue-600 bg-blue-50/70' : 'text-gray-600 hover:bg-gray-50'
               )}
             >
-              <ItemIcon size={17} className={cn('shrink-0', isActive ? 'text-blue-600' : 'text-gray-400')} />
+              <ItemIcon size={16} className={cn('shrink-0', isActive ? 'text-blue-600' : 'text-gray-400')} />
               <span className="flex-1 text-left">{item.label}</span>
               {item.badge && (
-                <span className="text-[9px] bg-yellow-400 text-black px-1.5 py-0.5 rounded-full font-bold">
+                <span className="text-[9px] bg-blue-100 text-blue-600 px-1.5 py-0.5 rounded font-semibold">
                   {item.badge}
                 </span>
               )}
               {hasSubItems && (
-                <ChevronDown size={14} className={cn('text-gray-400 transition-transform', isExpanded && 'rotate-180')} />
+                <ChevronDown size={13} className={cn('text-gray-400 transition-transform duration-150', isExpanded && 'rotate-180')} />
               )}
             </button>
-            {hasSubItems && isExpanded && (
-              <div className="bg-gray-50/50">
-                {item.subItems!.map((sub) => (
-                  <button
-                    key={sub.id}
-                    onClick={() => setActivePage(sub.id)}
-                    className={cn(
-                      'w-full flex items-center gap-2 pl-12 pr-4 py-2 text-[12.5px] font-medium transition-colors',
-                      activePage === sub.id
-                        ? 'text-blue-600 bg-blue-50'
-                        : 'text-gray-500 hover:text-gray-700 hover:bg-gray-100/50'
-                    )}
-                  >
-                    <span>{sub.label}</span>
-                    {sub.badge && (
-                      <span className="text-[8px] bg-yellow-400 text-black px-1 rounded-full font-bold ml-auto">
-                        {sub.badge}
-                      </span>
-                    )}
-                  </button>
-                ))}
-              </div>
-            )}
+            <div
+              className={cn(
+                'overflow-hidden transition-all duration-200',
+                hasSubItems && isExpanded ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+              )}
+            >
+              {hasSubItems && item.subItems!.map((sub) => (
+                <button
+                  key={sub.id}
+                  onClick={() => setActivePage(sub.id)}
+                  className={cn(
+                    'w-full flex items-center gap-2 pl-12 pr-4 py-2 text-[12.5px] font-medium transition-colors',
+                    activePage === sub.id
+                      ? 'text-blue-600 bg-blue-50/70'
+                      : 'text-gray-500 hover:text-gray-700 hover:bg-gray-50'
+                  )}
+                >
+                  <span>{sub.label}</span>
+                  {sub.badge && (
+                    <span className="text-[9px] bg-blue-100 text-blue-600 px-1 rounded font-semibold ml-auto">
+                      {sub.badge}
+                    </span>
+                  )}
+                </button>
+              ))}
+            </div>
           </div>
         );
       })}
@@ -388,11 +415,16 @@ export default function TopNav({ activePage, setActivePage, onLogout, openAI }: 
           </button>
 
           {/* Logo */}
-          <div className="flex items-center gap-2 mr-4 shrink-0 cursor-pointer" onClick={() => setActivePage('dashboard')}>
-            <div className="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center font-extrabold text-white text-sm shadow-sm">
+          <div
+            className="flex items-center gap-2 mr-5 shrink-0 cursor-pointer"
+            onClick={() => setActivePage('dashboard')}
+          >
+            <div className="w-7 h-7 rounded-lg bg-blue-600 flex items-center justify-center font-bold text-white text-sm">
               S
             </div>
-            <span className="text-gray-900 font-bold text-[15px] tracking-tight hidden sm:block">SkillBloomer</span>
+            <span className="text-gray-900 font-semibold text-sm tracking-tight hidden sm:block">
+              SkillBloomer
+            </span>
           </div>
 
           {/* Desktop Dropdown Navigation */}
@@ -409,27 +441,31 @@ export default function TopNav({ activePage, setActivePage, onLogout, openAI }: 
                   <button
                     onClick={() => setOpenDropdown(isOpen ? null : section.id)}
                     className={cn(
-                      'flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[13px] font-medium transition-colors',
+                      'flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[13px] font-medium transition-all duration-150 relative',
                       isOpen
                         ? 'bg-gray-100 text-gray-900'
                         : isActiveSection
                           ? 'text-blue-600'
-                          : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                          : 'text-gray-500 hover:bg-gray-50 hover:text-gray-800'
                     )}
                   >
                     <span>{section.label}</span>
-                    <ChevronDown size={13} className={cn('transition-transform', isOpen && 'rotate-180')} />
-                  </button>
-                  {isOpen && (
-                    <DropdownMenu
-                      label={section.label}
-                      icon={SectionIcon}
-                      items={section.items}
-                      activePage={activePage}
-                      setActivePage={setActivePage}
-                      onClose={() => setOpenDropdown(null)}
+                    <ChevronDown
+                      size={12}
+                      className={cn('transition-transform duration-150', isOpen && 'rotate-180')}
                     />
-                  )}
+                    {/* Active section indicator */}
+                    {isActiveSection && !isOpen && (
+                      <span className="absolute -bottom-[9px] left-3 right-3 h-[2px] bg-blue-600 rounded-full" />
+                    )}
+                  </button>
+                  <DropdownMenu
+                    items={section.items}
+                    activePage={activePage}
+                    setActivePage={setActivePage}
+                    onClose={() => setOpenDropdown(null)}
+                    isVisible={isOpen}
+                  />
                 </div>
               );
             })}
@@ -440,18 +476,18 @@ export default function TopNav({ activePage, setActivePage, onLogout, openAI }: 
         <div className="flex items-center gap-1.5">
           {/* Search (desktop) */}
           <div className="relative hidden md:block">
-            <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-400" size={15} />
+            <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-400" size={14} />
             <input
               type="text"
               placeholder="Search..."
-              className="w-44 h-8 pl-8 pr-3 rounded-lg border border-gray-200 bg-gray-50 text-[13px] focus:outline-none focus:ring-1 focus:ring-blue-500/30 focus:border-blue-400 transition-all placeholder:text-gray-400"
+              className="w-40 h-8 pl-8 pr-3 rounded-lg border border-gray-200 bg-gray-50/80 text-[13px] focus:outline-none focus:ring-1 focus:ring-blue-500/20 focus:border-blue-300 transition-all placeholder:text-gray-400"
             />
           </div>
 
           {/* AI Mode */}
           <button
             onClick={openAI}
-            className="flex items-center gap-1.5 h-8 px-3 rounded-lg bg-blue-600 text-white text-[12px] font-semibold shadow-sm hover:bg-blue-700 transition-colors"
+            className="flex items-center gap-1.5 h-8 px-3 rounded-lg bg-blue-600 text-white text-[12px] font-medium hover:bg-blue-700 transition-colors"
           >
             <Zap size={13} fill="white" />
             <span className="hidden sm:inline">AI</span>
@@ -459,8 +495,8 @@ export default function TopNav({ activePage, setActivePage, onLogout, openAI }: 
 
           {/* Notifications */}
           <button className="relative w-8 h-8 rounded-lg flex items-center justify-center text-gray-500 hover:bg-gray-100 transition-colors">
-            <Bell size={17} />
-            <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 bg-red-500 rounded-full"></span>
+            <Bell size={16} />
+            <span className="absolute top-1.5 right-1.5 w-1.5 h-1.5 bg-red-500 rounded-full" />
           </button>
 
           {/* Profile */}
@@ -469,83 +505,102 @@ export default function TopNav({ activePage, setActivePage, onLogout, openAI }: 
               onClick={() => setIsProfileOpen(!isProfileOpen)}
               className="flex items-center gap-2 p-1 pr-2 rounded-lg hover:bg-gray-50 transition-colors"
             >
-              <div className="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-[10px] font-bold text-white">
+              <div className="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-[10px] font-semibold text-white">
                 AA
               </div>
-              <ChevronDown size={13} className={cn('text-gray-400 hidden sm:block transition-transform', isProfileOpen && 'rotate-180')} />
+              <ChevronDown
+                size={12}
+                className={cn(
+                  'text-gray-400 hidden sm:block transition-transform duration-150',
+                  isProfileOpen && 'rotate-180'
+                )}
+              />
             </button>
 
-            {isProfileOpen && (
-              <div className="absolute top-full right-0 mt-1.5 w-56 bg-white border border-gray-200 rounded-xl shadow-lg z-50 overflow-hidden">
-                <div className="p-3.5 border-b border-gray-100 flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-full bg-blue-600 flex items-center justify-center text-xs font-bold text-white">AA</div>
-                  <div>
-                    <div className="text-[13px] font-semibold text-gray-900">Ankur Awasthi</div>
-                    <div className="text-[11px] text-gray-500">Instructor</div>
-                  </div>
-                </div>
-                <div className="py-1.5">
-                  <button className="w-full flex items-center gap-2.5 px-3.5 py-2 text-[13px] text-gray-700 hover:bg-gray-50 transition-colors">
-                    <User size={15} className="text-gray-400" /> View Profile
-                  </button>
-                  <button
-                    onClick={() => { setActivePage('settings'); setIsProfileOpen(false); }}
-                    className="w-full flex items-center gap-2.5 px-3.5 py-2 text-[13px] text-gray-700 hover:bg-gray-50 transition-colors"
-                  >
-                    <Settings size={15} className="text-gray-400" /> Settings
-                  </button>
-                  <button className="w-full flex items-center gap-2.5 px-3.5 py-2 text-[13px] text-gray-700 hover:bg-gray-50 transition-colors">
-                    <CreditCard size={15} className="text-gray-400" /> Billing & Plans
-                  </button>
-                </div>
-                <div className="border-t border-gray-100 py-1.5">
-                  <button
-                    onClick={onLogout}
-                    className="w-full flex items-center gap-2.5 px-3.5 py-2 text-[13px] text-red-600 hover:bg-red-50 transition-colors"
-                  >
-                    <LogOut size={15} /> Sign Out
-                  </button>
+            <div
+              className={cn(
+                'absolute top-full right-0 mt-1.5 w-52 bg-white border border-gray-200 rounded-xl shadow-lg z-50 overflow-hidden transition-all duration-150 origin-top-right',
+                isProfileOpen
+                  ? 'opacity-100 scale-100 translate-y-0'
+                  : 'opacity-0 scale-95 -translate-y-1 pointer-events-none'
+              )}
+            >
+              <div className="p-3 border-b border-gray-100 flex items-center gap-2.5">
+                <div className="w-8 h-8 rounded-full bg-blue-600 flex items-center justify-center text-[10px] font-semibold text-white">AA</div>
+                <div>
+                  <div className="text-[13px] font-semibold text-gray-900">Ankur Awasthi</div>
+                  <div className="text-[11px] text-gray-500">Instructor</div>
                 </div>
               </div>
-            )}
+              <div className="py-1">
+                <button className="w-full flex items-center gap-2.5 px-3 py-2 text-[13px] text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors">
+                  <User size={15} className="text-gray-400" /> View Profile
+                </button>
+                <button
+                  onClick={() => { setActivePage('settings'); setIsProfileOpen(false); }}
+                  className="w-full flex items-center gap-2.5 px-3 py-2 text-[13px] text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors"
+                >
+                  <Settings size={15} className="text-gray-400" /> Settings
+                </button>
+                <button className="w-full flex items-center gap-2.5 px-3 py-2 text-[13px] text-gray-600 hover:bg-gray-50 hover:text-gray-900 transition-colors">
+                  <CreditCard size={15} className="text-gray-400" /> Billing & Plans
+                </button>
+              </div>
+              <div className="border-t border-gray-100 py-1">
+                <button
+                  onClick={onLogout}
+                  className="w-full flex items-center gap-2.5 px-3 py-2 text-[13px] text-red-600 hover:bg-red-50 transition-colors"
+                >
+                  <LogOut size={15} /> Sign Out
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </header>
 
+      {/* Mobile Overlay */}
+      <div
+        className={cn(
+          'fixed inset-0 bg-black/20 z-40 lg:hidden transition-opacity duration-200',
+          isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        )}
+        onClick={() => setIsMobileMenuOpen(false)}
+      />
+
       {/* Mobile Slide-Down Menu */}
-      {isMobileMenuOpen && (
-        <>
-          <div
-            className="fixed inset-0 bg-black/30 z-40 lg:hidden"
-            onClick={() => setIsMobileMenuOpen(false)}
-          />
-          <div className="fixed top-14 left-0 right-0 bottom-0 bg-white z-40 lg:hidden overflow-y-auto">
-            {/* Mobile Search */}
-            <div className="p-3 border-b border-gray-100">
-              <div className="relative">
-                <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
-                <input
-                  type="text"
-                  placeholder="Search..."
-                  className="w-full h-9 pl-9 pr-3 rounded-lg border border-gray-200 bg-gray-50 text-[13px] focus:outline-none focus:ring-1 focus:ring-blue-500/30 placeholder:text-gray-400"
-                />
-              </div>
-            </div>
-
-            {navSections.map(renderMobileNavSection)}
-
-            {/* Mobile Logout */}
-            <div className="border-t border-gray-100 p-3 mt-2">
-              <button
-                onClick={onLogout}
-                className="w-full flex items-center justify-center gap-2 py-2.5 text-[13px] font-medium text-red-600 hover:bg-red-50 rounded-lg transition-colors"
-              >
-                <LogOut size={15} /> Sign Out
-              </button>
-            </div>
+      <div
+        className={cn(
+          'fixed top-14 left-0 right-0 bottom-0 bg-white z-40 lg:hidden overflow-y-auto transition-all duration-200',
+          isMobileMenuOpen
+            ? 'opacity-100 translate-y-0'
+            : 'opacity-0 -translate-y-2 pointer-events-none'
+        )}
+      >
+        {/* Mobile Search */}
+        <div className="p-3 border-b border-gray-100">
+          <div className="relative">
+            <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
+            <input
+              type="text"
+              placeholder="Search..."
+              className="w-full h-9 pl-9 pr-3 rounded-lg border border-gray-200 bg-gray-50 text-[13px] focus:outline-none focus:ring-1 focus:ring-blue-500/20 placeholder:text-gray-400"
+            />
           </div>
-        </>
-      )}
+        </div>
+
+        {navSections.map(renderMobileNavSection)}
+
+        {/* Mobile Logout */}
+        <div className="border-t border-gray-100 p-3 mt-1">
+          <button
+            onClick={onLogout}
+            className="w-full flex items-center justify-center gap-2 py-2.5 text-[13px] font-medium text-red-600 hover:bg-red-50 rounded-lg transition-colors"
+          >
+            <LogOut size={15} /> Sign Out
+          </button>
+        </div>
+      </div>
     </>
   );
 }
