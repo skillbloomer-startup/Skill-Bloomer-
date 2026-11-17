@@ -1,0 +1,70 @@
+{
+  "channels": [
+    { "id": "linkedin", "label": "LinkedIn", "emoji": "💼" },
+    { "id": "naukri", "label": "Naukri", "emoji": "📋" },
+    { "id": "referral", "label": "Employee Referral", "emoji": "🤝" },
+    { "id": "campus", "label": "Campus", "emoji": "🎓" },
+    { "id": "agency", "label": "Agency", "emoji": "🏢" },
+    { "id": "github", "label": "GitHub / Community", "emoji": "🧑‍💻" },
+    { "id": "internal", "label": "Internal Mobility", "emoji": "🔁" },
+    { "id": "ai_agent", "label": "AI Sourcing Agent", "emoji": "🤖" }
+  ],
+  "roles": {
+    "junior_sales": {
+      "optimal": ["naukri", "referral"],
+      "why": "High-volume junior sales roles fill fastest and cheapest from job boards and referrals; agencies are overkill and GitHub is irrelevant.",
+      "fx": {
+        "linkedin": { "quality": 6, "cost_k": 18, "days": 21 },
+        "naukri": { "quality": 7, "cost_k": 8, "days": 14 },
+        "referral": { "quality": 8, "cost_k": 10, "days": 16 },
+        "campus": { "quality": 6, "cost_k": 12, "days": 45 },
+        "agency": { "quality": 6, "cost_k": 45, "days": 18 },
+        "github": { "quality": 1, "cost_k": 5, "days": 40 },
+        "internal": { "quality": 5, "cost_k": 3, "days": 20 },
+        "ai_agent": { "quality": 7, "cost_k": 9, "days": 12 }
+      }
+    },
+    "senior_engineer": {
+      "optimal": ["github", "referral"],
+      "why": "Senior engineers are mostly passive. Community/GitHub shows real work, and referrals carry trust. Job boards are flooded with keyword-stuffed CVs.",
+      "fx": {
+        "linkedin": { "quality": 6, "cost_k": 60, "days": 38 },
+        "naukri": { "quality": 4, "cost_k": 25, "days": 42 },
+        "referral": { "quality": 9, "cost_k": 50, "days": 30 },
+        "campus": { "quality": 1, "cost_k": 20, "days": 90 },
+        "agency": { "quality": 6, "cost_k": 280, "days": 35 },
+        "github": { "quality": 9, "cost_k": 30, "days": 34 },
+        "internal": { "quality": 6, "cost_k": 10, "days": 25 },
+        "ai_agent": { "quality": 7, "cost_k": 35, "days": 26 }
+      }
+    },
+    "head_operations": {
+      "optimal": ["referral", "internal"],
+      "why": "Leadership hires succeed most when trust and context exist: referrals from people who've worked with them, and internal successors who know the business. Exec-search agencies are an acceptable (expensive) alternative.",
+      "fx": {
+        "linkedin": { "quality": 6, "cost_k": 150, "days": 60 },
+        "naukri": { "quality": 3, "cost_k": 60, "days": 70 },
+        "referral": { "quality": 9, "cost_k": 120, "days": 50 },
+        "campus": { "quality": 0, "cost_k": 30, "days": 120 },
+        "agency": { "quality": 8, "cost_k": 1100, "days": 55 },
+        "github": { "quality": 0, "cost_k": 10, "days": 120 },
+        "internal": { "quality": 8, "cost_k": 40, "days": 35 },
+        "ai_agent": { "quality": 6, "cost_k": 80, "days": 45 }
+      }
+    },
+    "volume_support": {
+      "optimal": ["naukri", "ai_agent"],
+      "why": "Volume hiring needs reach and fast screening.",
+      "fx": {
+        "linkedin": { "quality": 4, "cost_k": 8, "days": 20 },
+        "naukri": { "quality": 7, "cost_k": 4, "days": 10 },
+        "referral": { "quality": 8, "cost_k": 6, "days": 14 },
+        "campus": { "quality": 6, "cost_k": 5, "days": 30 },
+        "agency": { "quality": 6, "cost_k": 15, "days": 12 },
+        "github": { "quality": 0, "cost_k": 2, "days": 60 },
+        "internal": { "quality": 4, "cost_k": 2, "days": 20 },
+        "ai_agent": { "quality": 8, "cost_k": 3, "days": 7 }
+      }
+    }
+  }
+}

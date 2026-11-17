@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #05060f;
+  color-scheme: dark;
+}
+html, body { background: var(--bg); color: #f4f6ff; }
+body { min-height: 100dvh; overscroll-behavior-y: none; -webkit-tap-highlight-color: transparent; }
+
+/* 2031 office backdrop */
+.bg-office {
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(139,92,255,.22), transparent 60%),
+    radial-gradient(900px 500px at 110% 10%, rgba(34,228,255,.16), transparent 60%),
+    radial-gradient(700px 400px at 50% 120%, rgba(255,62,165,.14), transparent 60%),
+    #05060f;
+}
+.grid-floor {
+  background-image: linear-gradient(rgba(34,228,255,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(34,228,255,.06) 1px, transparent 1px);
+  background-size: 36px 36px;
+  mask-image: linear-gradient(to bottom, transparent, black 30%, black 70%, transparent);
+}
+
+@layer components {
+  .glass { @apply rounded-2xl border border-white/10 bg-white/[0.05] backdrop-blur-xl shadow-[0_8px_32px_rgba(0,0,0,.35)]; }
+  .glass-strong { @apply rounded-2xl border border-white/15 bg-ink-800/80 backdrop-blur-xl shadow-[0_8px_40px_rgba(0,0,0,.5)]; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-3 font-semibold transition active:scale-[.97] disabled:opacity-40 disabled:pointer-events-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neon-cyan; }
+  .btn-primary { @apply btn bg-gradient-to-r from-neon-cyan to-neon-violet text-ink-950 shadow-glow hover:brightness-110; }
+  .btn-ghost { @apply btn border border-white/15 bg-white/5 text-white hover:bg-white/10; }
+  .btn-pink { @apply btn bg-neon-pink text-white shadow-glowpink hover:brightness-110; }
+  .chip { @apply inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-sm transition; }
+  .chip-on { @apply border-neon-cyan bg-neon-cyan/15 text-neon-cyan; }
+  .label { @apply text-[11px] uppercase tracking-[.18em] text-white/50; }
+  .input { @apply w-full rounded-xl border border-white/15 bg-ink-900/70 px-4 py-3 text-white placeholder-white/30 outline-none focus:border-neon-cyan focus:ring-2 focus:ring-neon-cyan/30; }
+  .neon-text { @apply bg-gradient-to-r from-neon-cyan via-white to-neon-pink bg-clip-text text-transparent; }
+}
+
+.scrollbar-thin::-webkit-scrollbar { width: 6px; height: 6px; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: rgba(255,255,255,.15); border-radius: 9px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}

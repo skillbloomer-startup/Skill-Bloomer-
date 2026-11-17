@@ -1,0 +1,149 @@
+[
+  {
+    "id": "fabricated-cv",
+    "competency": "fraud",
+    "title": "5 signs of a fabricated CV",
+    "minutes": 1,
+    "body": [
+      "1. Overlapping full-time roles — line up the month/year of every job. Two full-time jobs rarely run in parallel.",
+      "2. Impossible tenure — '12 years of leadership' with a 2018 graduation date.",
+      "3. Senior titles at tiny companies — check headcount on the company page before you trust 'VP'.",
+      "4. CV updated minutes before applying with your exact JD language.",
+      "5. References limited to HR or friends, never a direct manager."
+    ],
+    "takeaway": "Build a 30-second 'timeline check' into every screen: dates, headcount, references.",
+    "sponsor_slot": true
+  },
+  {
+    "id": "claimed-vs-demonstrated",
+    "competency": "skill",
+    "title": "Claimed vs demonstrated skills",
+    "minutes": 1,
+    "body": [
+      "A skill on a CV is a claim; a story with specifics is evidence.",
+      "Ask 'what did YOU configure / decide / write?' — consumers of a technology describe it in the passive voice.",
+      "Look for artefacts: post-mortems, repos, dashboards, numbers with a baseline.",
+      "Candidates who say 'I haven't done that in production' are often more trustworthy than those who claim everything."
+    ],
+    "takeaway": "Replace 'Do you know X?' with 'Tell me about the last time you did X yourself.'",
+    "sponsor_slot": true
+  },
+  {
+    "id": "overrule-ai",
+    "competency": "ai",
+    "title": "When to overrule your AI shortlist",
+    "minutes": 1,
+    "body": [
+      "AI match scores reward keyword overlap. Polished CVs and JD-mirrored language inflate them.",
+      "Overrule when the evidence (interview specifics, references, timeline) contradicts the score.",
+      "Don't overrule on gut feel alone — AI is right often, and unnecessary overrules waste good candidates.",
+      "Track your overrules: if you're right less than half the time, slow down and gather one more signal."
+    ],
+    "takeaway": "AI shortlists. Humans make the call — with evidence."
+  },
+  {
+    "id": "college-tier-bias",
+    "competency": "bias",
+    "title": "How college-tier and gap bias shrink your talent pool",
+    "minutes": 1,
+    "body": [
+      "College tier predicts very little about job performance after the first 2 years of work.",
+      "Career gaps (caregiving, health, study) are disproportionately taken by women and carers — penalising them cuts a large qualified pool.",
+      "Age signals ('graduated 2002') trigger assumptions about adaptability that the evidence rarely supports.",
+      "Blind screening (hide name, photo, institute, age) at the first pass measurably narrows rating gaps."
+    ],
+    "takeaway": "Score the evidence first, then look at the profile. Try a blind first pass on your next role.",
+    "sponsor_slot": true
+  },
+  {
+    "id": "reading-interview-signals",
+    "competency": "culture",
+    "title": "Reading behavioural signals in interviews",
+    "minutes": 1,
+    "body": [
+      "Listen for pronouns: 'I' for blame-free wins and 'they' for failures is a red flag; 'we' for wins and 'I' for misses is a green one.",
+      "Dismissive language about former teams or managers predicts conflict and attrition.",
+      "Ask about failure. Strong candidates own it and describe what they changed.",
+      "Confidence isn't competence — calm specifics beat high-energy slogans."
+    ],
+    "takeaway": "Always ask one 'tell me about a time you failed' question and score ownership."
+  },
+  {
+    "id": "channel-fit",
+    "competency": "sourcing",
+    "title": "Matching sourcing channels to the role",
+    "minutes": 1,
+    "body": [
+      "Volume and junior roles: job boards, referrals and AI sourcing agents — fast and cheap.",
+      "Senior engineers: communities, GitHub and referrals — the best ones are passive.",
+      "Leadership: referrals, internal successors and (if budget allows) exec search.",
+      "Measure cost-per-hire AND 6-month quality by channel, not just applicant volume."
+    ],
+    "takeaway": "Pick channels by where the best candidates already are, not where applications are easiest."
+  },
+  {
+    "id": "structured-interviews",
+    "competency": "interview",
+    "title": "Why structured interviews cut mis-hires",
+    "minutes": 1,
+    "body": [
+      "Structured interviews (same questions, scored against anchors) predict performance roughly twice as well as unstructured chats.",
+      "Generic questions ('Where do you see yourself in 5 years?') produce rehearsed answers and no new information.",
+      "Design each question to test one specific claim or risk you found in the CV.",
+      "Write the 'good answer' anchor before the interview, not after."
+    ],
+    "takeaway": "For every CV, write one question that could prove the candidate wrong.",
+    "sponsor_slot": true
+  },
+  {
+    "id": "offer-negotiation",
+    "competency": "offer",
+    "title": "Closing offers without breaking the band",
+    "minutes": 1,
+    "body": [
+      "Know the candidate's real motivator before the number: growth, flexibility, team, or cash.",
+      "Non-cash levers (joining bonus, WFH days, learning budget, title clarity) close many gaps.",
+      "Meeting in the middle signals respect; holding firm works only when you're clearly the best option.",
+      "Walking away is a valid outcome when the ask breaks internal parity."
+    ],
+    "takeaway": "Ask 'What would make this a clear yes?' before you make the offer."
+  },
+  {
+    "id": "speed-vs-quality",
+    "competency": "speed",
+    "title": "Fast is good. Rushed is expensive.",
+    "minutes": 1,
+    "body": [
+      "Top candidates are off the market in ~10 days — speed matters.",
+      "But a bad hire costs 30–150% of annual salary. Speed without verification is a false saving.",
+      "Use time-boxes: decide your 'must-verify' list up front, verify it, then move.",
+      "Over-deliberation has a cost too: candidates ghost slow processes."
+    ],
+    "takeaway": "Set a must-verify checklist per role so you can move fast with confidence."
+  },
+  {
+    "id": "candidate-experience",
+    "competency": "cx",
+    "title": "Rejection is a brand moment",
+    "minutes": 1,
+    "body": [
+      "Most candidates never hear back — and tell others about it.",
+      "A 3-line personalised note (one strength, one reason, one door left open) takes 2 minutes.",
+      "Silver-medallists are your cheapest future hires: keep them in a talent pool and stay in touch.",
+      "Candidate experience scores correlate with offer acceptance."
+    ],
+    "takeaway": "Never leave a finalist without personal feedback."
+  },
+  {
+    "id": "calibration",
+    "competency": "speed",
+    "title": "Calibrate your confidence",
+    "minutes": 1,
+    "body": [
+      "Over-confident recruiters skip verification; under-confident ones over-interview.",
+      "Before each final decision, write your confidence (1–5). Review it against 6-month outcomes.",
+      "Good calibration means your 5/5 calls are right ~90% of the time."
+    ],
+    "takeaway": "Keep a decision journal for your next 10 hires."
+  }
+]

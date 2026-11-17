@@ -1,0 +1,1745 @@
+{
+  "id": "core-2031",
+  "name": "Core 2031 — Mixed Roles",
+  "industry": "IT / SaaS",
+  "description": "Sales, Engineering and Leadership hiring at a fast-growing Noida SaaS company.",
+  "rounds": [
+    {
+      "id": "r1-sales",
+      "title": "Junior Sales Executive",
+      "level": "easy",
+      "seconds": 60,
+      "role_key": "junior_sales",
+      "brief": [
+        "Good morning, Recruiter. I'm ARIA, your AI shortlisting agent. 🛰️",
+        "First up: a Junior Sales Executive for our inside-sales pod. 1–2 years of B2B calling, CRM hygiene, and grit. Budget ₹4–6 LPA.",
+        "I've ranked 6 candidates. I'm usually right… usually. Swipe ⭐ to shortlist, 🚩 to flag a red flag, ➡️ to skip. You make the call."
+      ],
+      "rookie_tip": "Tip: compare the dates on each CV. Two full-time jobs can't run at the same time.",
+      "budget_lpa": {
+        "min": 4,
+        "max": 6
+      },
+      "bad_hire_cost_lpa": 3.5,
+      "questions": [
+        {
+          "id": "q1",
+          "text": "Walk me through last month's numbers — dials, meetings booked, deals closed.",
+          "kind": "structured"
+        },
+        {
+          "id": "q2",
+          "text": "Tell me about a deal you expected to win and lost. What did you change after?",
+          "kind": "behavioral"
+        },
+        {
+          "id": "q3",
+          "text": "Sell me this pen.",
+          "kind": "generic"
+        },
+        {
+          "id": "q4",
+          "text": "What are your biggest strengths and weaknesses?",
+          "kind": "generic"
+        },
+        {
+          "id": "q5",
+          "text": "Walk me through your timeline month by month since 2029 — any overlaps or gaps?",
+          "kind": "structured"
+        },
+        {
+          "id": "q6",
+          "text": "How did you get along with your last manager and team?",
+          "kind": "behavioral"
+        }
+      ],
+      "aria_mistake": "ARIA got this one right — Priya's numbers are real and specific. But ARIA also scored Sneha 10 points above Faiz purely on college tier, and rated Arjun 82 without noticing that his two 'full-time' jobs overlap by 7 months.",
+      "best_hire_explanation": "Priya combines verifiable activity metrics (60 dials/day, 14 meetings/month) with a learning mindset after lost deals. Clean CV, realistic salary, short notice.",
+      "candidates": [
+        {
+          "id": "r1c1",
+          "name": "Priya Nair",
+          "age": 24,
+          "title": "Business Development Rep, Cloudkart Solutions",
+          "location": "Noida",
+          "avatar": {
+            "skin": 3,
+            "hair": "long",
+            "hairColor": 0,
+            "accessory": "earrings",
+            "bg": 0
+          },
+          "roles": [
+            {
+              "title": "Business Development Rep",
+              "company": "Cloudkart Solutions",
+              "from": "2029-11",
+              "to": "present"
+            },
+            {
+              "title": "Sales Intern",
+              "company": "Brightloop Edtech",
+              "from": "2028-12",
+              "to": "2029-05"
+            },
+            {
+              "title": "Campus Ambassador",
+              "company": "Zestora Foods",
+              "from": "2027-07",
+              "to": "2028-06"
+            }
+          ],
+          "skills": [
+            "Cold calling",
+            "Zoho CRM",
+            "Discovery calls",
+            "LinkedIn outreach",
+            "Hindi / English / Malayalam"
+          ],
+          "education": "BBA, Amity Crest University (Tier 2), 2029",
+          "blind_education": "BBA, 2029",
+          "aria_score": 88,
+          "aria_reason": "Consistent quota attainment language and strong CRM keywords.",
+          "interview": {
+            "lines": [
+              "“I average about 60 dials a day; last month that became 14 qualified meetings and 3 closures.”",
+              "“When a deal stalls I go back to discovery — usually I skipped a stakeholder.”"
+            ],
+            "sentiment": "Confident"
+          },
+          "details": {
+            "references": "Team lead at Cloudkart (available)",
+            "notice_period": "30 days",
+            "salary_expectation_lpa": 5.2,
+            "current_ctc_lpa": 4.2,
+            "activity": "Active on ScriniLink 2 days ago · applied directly"
+          },
+          "flags": [],
+          "suspicion": "5-month gap between internship and first job",
+          "interview_answers": {
+            "q1": {
+              "text": "“Dials: ~1,250. Meetings booked: 14. Closed: 3 at an average ₹1.8L ACV. I can share my CRM dashboard screenshot.”"
+            },
+            "q2": {
+              "text": "“Lost a logistics client to a cheaper tool. I'd never met their finance head. Now I map every decision-maker in week one.”"
+            },
+            "q5": {
+              "text": "“No overlaps. The 5-month gap in 2029 was when my father had surgery — I did a Sales Navigator certification online during that time.”",
+              "clears": "The gap was caregiving + upskilling. Not a red flag."
+            }
+          },
+          "reference_quote": "“Priya books more meetings than anyone in her batch and updates the CRM the same day. I'd rehire her.” — Team Lead, Cloudkart",
+          "offer": {
+            "competing_offer_lpa": 5.5,
+            "accept_prob": {
+              "match": 0.9,
+              "middle": 0.8,
+              "hold": 0.55,
+              "perks": 0.78
+            },
+            "ghost_prob": 0.05
+          },
+          "true_quality": 86,
+          "is_best_hire": true,
+          "hire_outcome": "Six months in: 118% of quota, now mentoring the next intern batch."
+        },
+        {
+          "id": "r1c2",
+          "name": "Arjun Mehta",
+          "age": 25,
+          "title": "Sales Executive, Ventro Telecom",
+          "location": "Ghaziabad",
+          "avatar": {
+            "skin": 2,
+            "hair": "short",
+            "hairColor": 0,
+            "accessory": "none",
+            "bg": 1
+          },
+          "roles": [
+            {
+              "title": "Sales Executive",
+              "company": "Ventro Telecom",
+              "from": "2030-03",
+              "to": "present"
+            },
+            {
+              "title": "Inside Sales Associate (full-time)",
+              "company": "Quickmart B2B",
+              "from": "2029-08",
+              "to": "2030-10"
+            },
+            {
+              "title": "Telecaller",
+              "company": "Pinnacle BPO Services",
+              "from": "2028-09",
+              "to": "2029-07"
+            }
+          ],
+          "skills": [
+            "B2B sales",
+            "Lead generation",
+            "Salesforce",
+            "Negotiation",
+            "Pipeline management"
+          ],
+          "education": "B.Com, Delhi Northern College (Tier 2), 2028",
+          "blind_education": "B.Com, 2028",
+          "aria_score": 82,
+          "aria_reason": "3 sales roles, Salesforce + negotiation keywords, continuous employment.",
+          "interview": {
+            "lines": [
+              "“I've handled both telecom and B2B ecommerce clients.”",
+              "“I'm a closer — my targets were always met.”"
+            ],
+            "sentiment": "Positive"
+          },
+          "details": {
+            "references": "Not provided yet",
+            "notice_period": "Immediate",
+            "salary_expectation_lpa": 5.8,
+            "current_ctc_lpa": 4.6,
+            "activity": "Applied via agency"
+          },
+          "flags": [
+            {
+              "type": "fake_experience",
+              "explanation": "Ventro Telecom (Mar 2030–present) overlaps with a full-time role at Quickmart B2B (Aug 2029–Oct 2030) by 7 months. Two full-time jobs can't run in parallel — one of them is padded."
+            }
+          ],
+          "interview_answers": {
+            "q5": {
+              "text": "“Uh… Quickmart ended earlier actually, I just didn't update the date. Or it was part-time for some months.”",
+              "reveals": "fake_experience"
+            },
+            "q1": {
+              "text": "“I don't remember exact numbers, but I always hit target.”"
+            }
+          },
+          "reference_quote": "“Arjun was with us for about 4 months in 2030, not a year. He left without serving notice.” — HR, Quickmart B2B",
+          "offer": {
+            "competing_offer_lpa": 6.0,
+            "accept_prob": {
+              "match": 0.85,
+              "middle": 0.7,
+              "hold": 0.5,
+              "perks": 0.6
+            },
+            "ghost_prob": 0.3
+          },
+          "true_quality": 41,
+          "is_best_hire": false,
+          "hire_outcome": "Background verification failed in month 2 — offer revoked, role reopened."
+        },
+        {
+          "id": "r1c3",
+          "name": "Sneha Kulkarni",
+          "age": 24,
+          "title": "Inside Sales Associate, Fintrail Payments",
+          "location": "Noida",
+          "avatar": {
+            "skin": 1,
+            "hair": "bun",
+            "hairColor": 1,
+            "accessory": "glasses",
+            "bg": 2
+          },
+          "roles": [
+            {
+              "title": "Inside Sales Associate",
+              "company": "Fintrail Payments",
+              "from": "2029-07",
+              "to": "present"
+            },
+            {
+              "title": "Marketing Intern",
+              "company": "Holi Hues Retail",
+              "from": "2028-12",
+              "to": "2029-05"
+            },
+            {
+              "title": "Student Council Lead",
+              "company": "Indus Institute of Management",
+              "from": "2027-08",
+              "to": "2028-06"
+            }
+          ],
+          "skills": [
+            "Cold calling",
+            "HubSpot",
+            "Email sequencing",
+            "Product demos",
+            "English / Marathi / Hindi"
+          ],
+          "education": "BBA, Indus Institute of Management (Tier 1), 2029",
+          "blind_education": "BBA, 2029",
+          "aria_score": 78,
+          "aria_reason": "Tier-1 institute, relevant fintech sales experience.",
+          "interview": {
+            "lines": [
+              "“I run 3 email sequences a week and follow up by phone within 24 hours.”",
+              "“My meeting-to-demo rate is around 40%.”"
+            ],
+            "sentiment": "Positive"
+          },
+          "details": {
+            "references": "Manager at Fintrail (available)",
+            "notice_period": "45 days",
+            "salary_expectation_lpa": 5.5,
+            "current_ctc_lpa": 4.5,
+            "activity": "Active 1 week ago"
+          },
+          "flags": [],
+          "bias_pair": {
+            "group": "r1-tier",
+            "attribute": "college tier"
+          },
+          "interview_answers": {
+            "q1": {
+              "text": "“About 900 dials, 10 meetings, 2 closures. Fintech cycles are longer, so I track demos more.”"
+            }
+          },
+          "reference_quote": "“Reliable, organised, good with follow-ups. Solid performer.” — Manager, Fintrail",
+          "offer": {
+            "competing_offer_lpa": 5.8,
+            "accept_prob": {
+              "match": 0.85,
+              "middle": 0.7,
+              "hold": 0.45,
+              "perks": 0.65
+            },
+            "ghost_prob": 0.08
+          },
+          "true_quality": 72,
+          "is_best_hire": false,
+          "hire_outcome": "Steady performer — 94% of quota at six months."
+        },
+        {
+          "id": "r1c4",
+          "name": "Mohammed Faiz",
+          "age": 24,
+          "title": "Inside Sales Associate, Paysetu Fintech",
+          "location": "Lucknow (open to relocate)",
+          "avatar": {
+            "skin": 3,
+            "hair": "short",
+            "hairColor": 0,
+            "accessory": "beard",
+            "bg": 3
+          },
+          "roles": [
+            {
+              "title": "Inside Sales Associate",
+              "company": "Paysetu Fintech",
+              "from": "2029-07",
+              "to": "present"
+            },
+            {
+              "title": "Sales Intern",
+              "company": "Awadh Agro Exports",
+              "from": "2028-12",
+              "to": "2029-05"
+            },
+            {
+              "title": "NSS Volunteer Lead",
+              "company": "Gomti Valley College",
+              "from": "2027-08",
+              "to": "2028-06"
+            }
+          ],
+          "skills": [
+            "Cold calling",
+            "HubSpot",
+            "Email sequencing",
+            "Product demos",
+            "English / Urdu / Hindi"
+          ],
+          "education": "BBA, Gomti Valley College, Lucknow (Tier 3), 2029",
+          "blind_education": "BBA, 2029",
+          "aria_score": 68,
+          "aria_reason": "Relevant fintech sales; institute ranked lower in pedigree index.",
+          "interview": {
+            "lines": [
+              "“I run 3 email sequences a week and follow up by phone within 24 hours.”",
+              "“My meeting-to-demo rate is close to 40%.”"
+            ],
+            "sentiment": "Positive"
+          },
+          "details": {
+            "references": "Manager at Paysetu (available)",
+            "notice_period": "45 days",
+            "salary_expectation_lpa": 5.5,
+            "current_ctc_lpa": 4.5,
+            "activity": "Active 1 week ago"
+          },
+          "flags": [],
+          "bias_pair": {
+            "group": "r1-tier",
+            "attribute": "college tier"
+          },
+          "interview_answers": {
+            "q1": {
+              "text": "“Roughly 900 dials, 10 meetings, 2 closures. Fintech has longer cycles so I track demos closely.”"
+            }
+          },
+          "reference_quote": "“Reliable, organised, great with follow-ups. Solid performer.” — Manager, Paysetu",
+          "offer": {
+            "competing_offer_lpa": 5.8,
+            "accept_prob": {
+              "match": 0.88,
+              "middle": 0.74,
+              "hold": 0.5,
+              "perks": 0.7
+            },
+            "ghost_prob": 0.07
+          },
+          "true_quality": 72,
+          "is_best_hire": false,
+          "hire_outcome": "Steady performer — 95% of quota at six months."
+        },
+        {
+          "id": "r1c5",
+          "name": "Rahul Verma",
+          "age": 26,
+          "title": "Senior Sales Associate, Dealhive",
+          "location": "Noida",
+          "avatar": {
+            "skin": 2,
+            "hair": "wavy",
+            "hairColor": 1,
+            "accessory": "none",
+            "bg": 4
+          },
+          "roles": [
+            {
+              "title": "Senior Sales Associate",
+              "company": "Dealhive",
+              "from": "2030-01",
+              "to": "present"
+            },
+            {
+              "title": "Sales Associate",
+              "company": "Urbanstack Realty",
+              "from": "2028-10",
+              "to": "2029-12"
+            },
+            {
+              "title": "Sales Trainee",
+              "company": "Crestline Insurance",
+              "from": "2028-01",
+              "to": "2028-09"
+            }
+          ],
+          "skills": [
+            "Closing",
+            "Objection handling",
+            "Salesforce",
+            "Upselling",
+            "Team leadership"
+          ],
+          "education": "BBA, Noida Institute of Commerce (Tier 2), 2027",
+          "blind_education": "BBA, 2027",
+          "aria_score": 79,
+          "aria_reason": "Top-quartile revenue numbers, ‘Senior’ title, closing keywords.",
+          "interview": {
+            "lines": [
+              "“I was the top closer — honestly the rest of the team just slowed me down.”",
+              "“My last manager didn't understand sales, so I mostly worked around him.”"
+            ],
+            "sentiment": "Defensive"
+          },
+          "details": {
+            "references": "Prefers not to share current manager",
+            "notice_period": "30 days",
+            "salary_expectation_lpa": 6.5,
+            "current_ctc_lpa": 5.0,
+            "activity": "3 jobs in 3 years"
+          },
+          "flags": [
+            {
+              "type": "culture_risk",
+              "explanation": "Blames team and manager in the interview, avoids giving a manager reference, and treats colleagues as obstacles. High individual numbers, high team-damage risk."
+            }
+          ],
+          "interview_answers": {
+            "q6": {
+              "text": "“Honestly, my managers have never been very good. I perform better when nobody micromanages me and the team doesn't drag me down.”",
+              "reveals": "culture_risk"
+            },
+            "q2": {
+              "text": "“I don't really lose deals. When I do it's because pre-sales messed up the demo.”",
+              "reveals": "culture_risk"
+            }
+          },
+          "reference_quote": "“Strong closer, but two juniors asked to be moved off his pod.” — Former peer, Urbanstack",
+          "offer": {
+            "competing_offer_lpa": 7.0,
+            "accept_prob": {
+              "match": 0.8,
+              "middle": 0.55,
+              "hold": 0.3,
+              "perks": 0.4
+            },
+            "ghost_prob": 0.2
+          },
+          "true_quality": 55,
+          "is_best_hire": false,
+          "hire_outcome": "Hit target for 2 quarters; 2 team members resigned citing him. Exited in month 8."
+        },
+        {
+          "id": "r1c6",
+          "name": "Kavya Reddy",
+          "age": 23,
+          "title": "Sales Associate, Spicewell D2C",
+          "location": "Hyderabad",
+          "avatar": {
+            "skin": 4,
+            "hair": "curly",
+            "hairColor": 0,
+            "accessory": "none",
+            "bg": 5
+          },
+          "roles": [
+            {
+              "title": "Sales Associate",
+              "company": "Spicewell D2C",
+              "from": "2030-02",
+              "to": "present"
+            },
+            {
+              "title": "Customer Support Exec",
+              "company": "Tarkash Telecom",
+              "from": "2029-06",
+              "to": "2030-01"
+            },
+            {
+              "title": "Retail Intern",
+              "company": "Banjara Handlooms",
+              "from": "2028-12",
+              "to": "2029-03"
+            }
+          ],
+          "skills": [
+            "Customer handling",
+            "Retention",
+            "Freshdesk",
+            "Telugu / English / Hindi",
+            "Upselling"
+          ],
+          "education": "B.Com, Deccan Arts & Commerce College (Tier 3), 2029",
+          "blind_education": "B.Com, 2029",
+          "aria_score": 71,
+          "aria_reason": "Customer-facing experience, multilingual.",
+          "interview": {
+            "lines": [
+              "“I can join in 15 days, my company is flexible.”",
+              "“Currently I'm at around 6 LPA.”"
+            ],
+            "sentiment": "Neutral"
+          },
+          "details": {
+            "references": "Supervisor at Spicewell",
+            "notice_period": "90 days (per application form)",
+            "salary_expectation_lpa": 7.5,
+            "current_ctc_lpa": 3.6,
+            "activity": "Applied to 40+ roles this week"
+          },
+          "flags": [
+            {
+              "type": "inconsistent_info",
+              "explanation": "Interview says 15-day notice and ₹6 LPA current pay; application form says 90-day notice and ₹3.6 LPA CTC. Expectation of ₹7.5 LPA is ~2x current and above budget."
+            }
+          ],
+          "interview_answers": {
+            "q5": {
+              "text": "“Spicewell since Feb 2030. Notice is… I think 90 days officially, but they might release me early.”",
+              "reveals": "inconsistent_info"
+            }
+          },
+          "reference_quote": "“Kavya is good with customers. Notice is 90 days, no buyout.” — Supervisor, Spicewell",
+          "offer": {
+            "competing_offer_lpa": 7.0,
+            "accept_prob": {
+              "match": 0.7,
+              "middle": 0.4,
+              "hold": 0.2,
+              "perks": 0.35
+            },
+            "ghost_prob": 0.45
+          },
+          "true_quality": 58,
+          "is_best_hire": false,
+          "hire_outcome": "Accepted, then joined a competitor on the day of joining."
+        }
+      ]
+    },
+    {
+      "id": "r2-fullstack",
+      "title": "Senior Full-Stack Engineer",
+      "level": "medium",
+      "seconds": 75,
+      "role_key": "senior_engineer",
+      "brief": [
+        "Round 2: a Senior Full-Stack Engineer (React + Node + cloud) for the core platform team. Budget ₹28–38 LPA.",
+        "Engineering CVs are where keyword stuffing lives. I've matched against 412 skill tokens.",
+        "My #1 pick scored 94. Do you agree? Use the interview question to test claims, not to make small talk."
+      ],
+      "rookie_tip": "Tip: a high ARIA score can come from keywords alone. Look for proof of hands-on work.",
+      "budget_lpa": {
+        "min": 28,
+        "max": 38
+      },
+      "bad_hire_cost_lpa": 18,
+      "questions": [
+        {
+          "id": "q1",
+          "text": "Pick a production incident you owned end-to-end. What broke and what did you change?",
+          "kind": "technical"
+        },
+        {
+          "id": "q2",
+          "text": "On Kubernetes — what exactly did you configure yourself? Walk me through a manifest.",
+          "kind": "technical"
+        },
+        {
+          "id": "q3",
+          "text": "Walk me through 2019–2021 — who did you report to at each company?",
+          "kind": "structured"
+        },
+        {
+          "id": "q4",
+          "text": "As VP, how big was the team you led and what did you ship?",
+          "kind": "structured"
+        },
+        {
+          "id": "q5",
+          "text": "Where do you see yourself in 5 years?",
+          "kind": "generic"
+        },
+        {
+          "id": "q6",
+          "text": "Tell me about your career break and how you kept your skills current.",
+          "kind": "behavioral"
+        }
+      ],
+      "aria_mistake": "ARIA scored Rohan 94 because his CV matched 38 of 40 keywords — but the keywords were copied from the JD, and his 2019–2021 roles at Nexacore and Bluefin Labs overlap by 18 months. ARIA also docked Meera 12 points for a caregiving gap that has nothing to do with her skills.",
+      "best_hire_explanation": "Ananya's CV undersells her: 2 production incident write-ups, open-source contributions and a clean timeline. ARIA ranked her #4 because her CV uses plain language instead of buzzwords.",
+      "candidates": [
+        {
+          "id": "r2c1",
+          "name": "Rohan Malhotra",
+          "age": 33,
+          "title": "Principal Full-Stack Architect, Nexacore",
+          "location": "Gurugram",
+          "avatar": {
+            "skin": 1,
+            "hair": "short",
+            "hairColor": 0,
+            "accessory": "glasses",
+            "bg": 1
+          },
+          "roles": [
+            {
+              "title": "Principal Full-Stack Architect",
+              "company": "Nexacore Systems",
+              "from": "2019-06",
+              "to": "present"
+            },
+            {
+              "title": "Senior Software Engineer",
+              "company": "Bluefin Labs",
+              "from": "2018-01",
+              "to": "2021-02"
+            },
+            {
+              "title": "Software Engineer",
+              "company": "Kitewire Digital",
+              "from": "2015-07",
+              "to": "2017-12"
+            }
+          ],
+          "skills": [
+            "React, Next.js, Vue, Angular, Svelte",
+            "Node, Go, Rust, Java, Python",
+            "Kubernetes, Terraform, AWS, GCP, Azure",
+            "Microservices, GraphQL, Kafka",
+            "AI/ML, LLMOps, Blockchain"
+          ],
+          "education": "B.Tech CSE, Western Ghats Institute of Technology (Tier 1), 2015",
+          "blind_education": "B.Tech CSE, 2015",
+          "aria_score": 94,
+          "aria_reason": "38/40 JD keyword match, 'Principal Architect' seniority, full cloud stack.",
+          "interview": {
+            "lines": [
+              "“I've architected solutions across the full stack using best-in-class paradigms.”",
+              "“At Nexacore we leveraged synergies between microservices and AI.”"
+            ],
+            "sentiment": "Confident"
+          },
+          "details": {
+            "references": "HR contact only",
+            "notice_period": "60 days",
+            "salary_expectation_lpa": 42,
+            "current_ctc_lpa": 30,
+            "activity": "CV updated 2 hours before applying"
+          },
+          "flags": [
+            {
+              "type": "fake_experience",
+              "explanation": "Nexacore (Jun 2019–present) and Bluefin Labs (Jan 2018–Feb 2021) overlap by ~20 months as two full-time senior roles."
+            },
+            {
+              "type": "keyword_stuffing",
+              "explanation": "Lists 5 frontend frameworks, 5 languages, 3 clouds and Blockchain — near-verbatim from our JD. The interview is all buzzwords and no specifics."
+            }
+          ],
+          "interview_answers": {
+            "q3": {
+              "text": "“At Bluefin I was more of a… consultant towards the end. I'd have to check the dates. I reported to various stakeholders.”",
+              "reveals": "fake_experience"
+            },
+            "q1": {
+              "text": "“We had a latency issue and I architected a holistic solution using caching paradigms.” (No specifics after two follow-ups.)",
+              "reveals": "keyword_stuffing"
+            },
+            "q2": {
+              "text": "“I oversaw the Kubernetes strategy at a high level.”",
+              "reveals": "keyword_stuffing"
+            }
+          },
+          "reference_quote": "“Rohan left Bluefin in mid-2019. We have no record of employment after that.” — HR, Bluefin Labs",
+          "offer": {
+            "competing_offer_lpa": 45,
+            "accept_prob": {
+              "match": 0.8,
+              "middle": 0.6,
+              "hold": 0.35,
+              "perks": 0.45
+            },
+            "ghost_prob": 0.25
+          },
+          "true_quality": 38,
+          "is_best_hire": false,
+          "hire_outcome": "Couldn't ship a single feature unassisted in 90 days. Exit + rehire cost ≈ ₹18L."
+        },
+        {
+          "id": "r2c2",
+          "name": "Daniel Fernandes",
+          "age": 31,
+          "title": "Senior Software Engineer, Orbitpay",
+          "location": "Bengaluru (remote)",
+          "avatar": {
+            "skin": 2,
+            "hair": "curly",
+            "hairColor": 0,
+            "accessory": "beard",
+            "bg": 2
+          },
+          "roles": [
+            {
+              "title": "Senior Software Engineer",
+              "company": "Orbitpay",
+              "from": "2027-04",
+              "to": "present"
+            },
+            {
+              "title": "Software Engineer",
+              "company": "Tidewater Analytics",
+              "from": "2023-08",
+              "to": "2027-03"
+            },
+            {
+              "title": "Associate Engineer",
+              "company": "Konkan Softworks",
+              "from": "2021-07",
+              "to": "2023-07"
+            }
+          ],
+          "skills": [
+            "React",
+            "Node.js",
+            "Kubernetes",
+            "System design",
+            "PostgreSQL"
+          ],
+          "education": "B.E. IT, Goa Coastal Engineering College (Tier 2), 2021",
+          "blind_education": "B.E. IT, 2021",
+          "aria_score": 85,
+          "aria_reason": "Kubernetes + system design + fintech scale.",
+          "interview": {
+            "lines": [
+              "“Our DevOps team handled the cluster, I mostly pushed to the pipeline.”",
+              "“System design — I've read a lot about it, we followed the architect's diagrams.”"
+            ],
+            "sentiment": "Neutral"
+          },
+          "details": {
+            "references": "Tech lead at Orbitpay",
+            "notice_period": "30 days",
+            "salary_expectation_lpa": 34,
+            "current_ctc_lpa": 27,
+            "activity": "Active this week"
+          },
+          "flags": [
+            {
+              "type": "skill_mismatch",
+              "explanation": "CV headlines Kubernetes and system design, but the interview shows he consumed both — DevOps owned the cluster and an architect owned the design. A solid mid-level React/Node dev, not a senior owner."
+            }
+          ],
+          "interview_answers": {
+            "q2": {
+              "text": "“I haven't written manifests myself — DevOps gave us a Helm chart template. I just changed the image tag.”",
+              "reveals": "skill_mismatch"
+            },
+            "q1": {
+              "text": "“A payment retry bug — I fixed the React form validation. The infra side was handled by SRE.”",
+              "reveals": "skill_mismatch"
+            }
+          },
+          "reference_quote": "“Good React dev, dependable. Wouldn't put him on infra or design reviews yet.” — Tech Lead, Orbitpay",
+          "offer": {
+            "competing_offer_lpa": 33,
+            "accept_prob": {
+              "match": 0.85,
+              "middle": 0.72,
+              "hold": 0.55,
+              "perks": 0.6
+            },
+            "ghost_prob": 0.1
+          },
+          "true_quality": 60,
+          "is_best_hire": false,
+          "hire_outcome": "Good feature dev, but the platform team still needed a senior infra owner — a second hire was required."
+        },
+        {
+          "id": "r2c3",
+          "name": "Kunal Bansal",
+          "age": 26,
+          "title": "VP of Engineering, Snackr (stealth)",
+          "location": "Noida",
+          "avatar": {
+            "skin": 1,
+            "hair": "wavy",
+            "hairColor": 0,
+            "accessory": "none",
+            "bg": 3
+          },
+          "roles": [
+            {
+              "title": "VP of Engineering",
+              "company": "Snackr (5 people)",
+              "from": "2029-09",
+              "to": "present",
+              "note": "team of 5"
+            },
+            {
+              "title": "Co-founder & CTO",
+              "company": "Hustlebee (shut down)",
+              "from": "2028-06",
+              "to": "2029-08"
+            },
+            {
+              "title": "Software Engineer",
+              "company": "Pixelgrid Labs",
+              "from": "2027-07",
+              "to": "2028-05"
+            }
+          ],
+          "skills": [
+            "Leadership",
+            "React",
+            "Node.js",
+            "Fundraising",
+            "Product strategy"
+          ],
+          "education": "B.Tech, Yamuna Institute of Engineering (Tier 2), 2027",
+          "blind_education": "B.Tech, 2027",
+          "aria_score": 80,
+          "aria_reason": "VP + CTO titles indicate leadership seniority.",
+          "interview": {
+            "lines": [
+              "“As VP I set the engineering vision.”",
+              "“I'm looking for a senior IC role now, to go deeper technically.”"
+            ],
+            "sentiment": "Enthusiastic"
+          },
+          "details": {
+            "references": "Snackr founder (friend)",
+            "notice_period": "Immediate",
+            "salary_expectation_lpa": 36,
+            "current_ctc_lpa": 18,
+            "activity": "Active today"
+          },
+          "flags": [
+            {
+              "type": "title_inflation",
+              "explanation": "'VP of Engineering' at a 5-person company with ~4 years of total experience. He led 1 other engineer. The title doesn't mean senior scope."
+            }
+          ],
+          "interview_answers": {
+            "q4": {
+              "text": "“The team was me and one intern, plus a freelance designer. We shipped an MVP app.”",
+              "reveals": "title_inflation"
+            }
+          },
+          "reference_quote": "“Kunal's a hustler. Title was more of a startup thing, honestly.” — Founder, Snackr",
+          "offer": {
+            "competing_offer_lpa": 30,
+            "accept_prob": {
+              "match": 0.9,
+              "middle": 0.85,
+              "hold": 0.7,
+              "perks": 0.75
+            },
+            "ghost_prob": 0.12
+          },
+          "true_quality": 57,
+          "is_best_hire": false,
+          "hire_outcome": "Energetic, but performed at mid-level. Expected a 'Head of' title within 6 months."
+        },
+        {
+          "id": "r2c4",
+          "name": "Ananya Iyer",
+          "age": 30,
+          "title": "Software Engineer III, Lumen Health Tech",
+          "location": "Chennai (open to Noida)",
+          "avatar": {
+            "skin": 4,
+            "hair": "long",
+            "hairColor": 0,
+            "accessory": "glasses",
+            "bg": 4
+          },
+          "roles": [
+            {
+              "title": "Software Engineer III",
+              "company": "Lumen Health Tech",
+              "from": "2027-01",
+              "to": "present"
+            },
+            {
+              "title": "Software Engineer II",
+              "company": "Saffron Logistics Cloud",
+              "from": "2024-06",
+              "to": "2026-12"
+            },
+            {
+              "title": "Software Engineer",
+              "company": "Marina Data Systems",
+              "from": "2022-07",
+              "to": "2024-05"
+            }
+          ],
+          "skills": [
+            "TypeScript / React",
+            "Node.js",
+            "PostgreSQL",
+            "AWS (ECS, RDS)",
+            "Incident response"
+          ],
+          "education": "B.Tech CSE, Kaveri Regional Engineering College (Tier 2), 2022",
+          "blind_education": "B.Tech CSE, 2022",
+          "aria_score": 76,
+          "aria_reason": "Relevant stack; fewer leadership and architecture keywords.",
+          "interview": {
+            "lines": [
+              "“I wrote the post-mortem when our appointment API went down — root cause was a connection pool leak.”",
+              "“I maintain a small open-source date library, ~2k stars.”"
+            ],
+            "sentiment": "Neutral"
+          },
+          "details": {
+            "references": "Engineering manager + open-source co-maintainer",
+            "notice_period": "60 days (buyout possible)",
+            "salary_expectation_lpa": 33,
+            "current_ctc_lpa": 26,
+            "activity": "Passive candidate — sourced via GitHub"
+          },
+          "flags": [],
+          "interview_answers": {
+            "q1": {
+              "text": "“Pool exhaustion under load. I added pool metrics, a circuit breaker, and a load test in CI. p99 went from 4s to 300ms.”",
+              "clears": "Plain CV wording hid real senior ownership — confirmed."
+            },
+            "q2": {
+              "text": "“We're on ECS, not K8s. I've done K8s in side projects — I'd ramp up but I won't pretend I've run it in prod.”",
+              "clears": "Honest about gaps — a positive signal."
+            }
+          },
+          "reference_quote": "“Ananya is the person we call at 2am. Quietly the strongest engineer on the team.” — EM, Lumen Health Tech",
+          "offer": {
+            "competing_offer_lpa": 36,
+            "accept_prob": {
+              "match": 0.88,
+              "middle": 0.75,
+              "hold": 0.45,
+              "perks": 0.72
+            },
+            "ghost_prob": 0.06
+          },
+          "true_quality": 91,
+          "is_best_hire": true,
+          "hire_outcome": "Led the platform migration in month 5; now the go-to reviewer for the backend."
+        },
+        {
+          "id": "r2c5",
+          "name": "Meera Joshi",
+          "age": 34,
+          "title": "Senior Software Engineer (returning)",
+          "location": "Noida",
+          "avatar": {
+            "skin": 2,
+            "hair": "bun",
+            "hairColor": 2,
+            "accessory": "earrings",
+            "bg": 5
+          },
+          "roles": [
+            {
+              "title": "Freelance Full-Stack Developer",
+              "company": "Self-employed",
+              "from": "2029-07",
+              "to": "present"
+            },
+            {
+              "title": "Career break — caregiving",
+              "company": "—",
+              "from": "2027-06",
+              "to": "2029-06"
+            },
+            {
+              "title": "Senior Software Engineer",
+              "company": "Peregrine Retail Tech",
+              "from": "2022-03",
+              "to": "2027-05"
+            }
+          ],
+          "skills": [
+            "React",
+            "Node.js",
+            "PostgreSQL",
+            "AWS",
+            "Code review"
+          ],
+          "education": "B.Tech IT, Narmada Institute of Technology (Tier 2), 2019",
+          "blind_education": "B.Tech IT, 2019",
+          "aria_score": 66,
+          "aria_reason": "24-month employment gap reduces recency score.",
+          "interview": {
+            "lines": [
+              "“I shipped checkout for Peregrine — 3M orders a month.”",
+              "“During the break I rebuilt my portfolio on the current React and Node versions.”"
+            ],
+            "sentiment": "Positive"
+          },
+          "details": {
+            "references": "Former EM at Peregrine + 2 freelance clients",
+            "notice_period": "Immediate",
+            "salary_expectation_lpa": 32,
+            "current_ctc_lpa": 0,
+            "activity": "Returnship programme applicant"
+          },
+          "flags": [],
+          "suspicion": "2-year career gap",
+          "bias_pair": {
+            "group": "r2-gap",
+            "attribute": "caregiving career gap"
+          },
+          "interview_answers": {
+            "q6": {
+              "text": "“Caring for my mother after a stroke. I kept a weekly build log, did 2 freelance projects on React 22 and Node 30.”",
+              "clears": "Gap was caregiving; skills are current. Not a red flag."
+            },
+            "q1": {
+              "text": "“A cart-total rounding bug under a sale spike. I added property-based tests and a reconciliation job.”"
+            }
+          },
+          "reference_quote": "“Meera owned checkout end-to-end. I'd hire her back tomorrow.” — Former EM, Peregrine",
+          "offer": {
+            "competing_offer_lpa": 31,
+            "accept_prob": {
+              "match": 0.92,
+              "middle": 0.85,
+              "hold": 0.7,
+              "perks": 0.85
+            },
+            "ghost_prob": 0.04
+          },
+          "true_quality": 78,
+          "is_best_hire": false,
+          "hire_outcome": "Strong senior IC — owned the payments module by month 4."
+        },
+        {
+          "id": "r2c6",
+          "name": "Vikram Singh",
+          "age": 31,
+          "title": "Senior Software Engineer, Coralbay Commerce",
+          "location": "Noida",
+          "avatar": {
+            "skin": 3,
+            "hair": "turban",
+            "hairColor": 0,
+            "accessory": "beard",
+            "bg": 0
+          },
+          "roles": [
+            {
+              "title": "Senior Software Engineer",
+              "company": "Coralbay Commerce",
+              "from": "2027-02",
+              "to": "present"
+            },
+            {
+              "title": "Software Engineer",
+              "company": "Peregrine Retail Tech",
+              "from": "2023-03",
+              "to": "2027-01"
+            },
+            {
+              "title": "Software Engineer",
+              "company": "Doaba Infotech",
+              "from": "2021-07",
+              "to": "2023-02"
+            }
+          ],
+          "skills": [
+            "React",
+            "Node.js",
+            "PostgreSQL",
+            "AWS",
+            "Code review"
+          ],
+          "education": "B.Tech IT, Narmada Institute of Technology (Tier 2), 2021",
+          "blind_education": "B.Tech IT, 2021",
+          "aria_score": 78,
+          "aria_reason": "Continuous employment, relevant ecommerce stack.",
+          "interview": {
+            "lines": [
+              "“I shipped the checkout flow at Coralbay — ~3M orders a month.”",
+              "“I keep up with the latest React and Node releases through side projects.”"
+            ],
+            "sentiment": "Positive"
+          },
+          "details": {
+            "references": "EM at Coralbay",
+            "notice_period": "30 days",
+            "salary_expectation_lpa": 32,
+            "current_ctc_lpa": 25,
+            "activity": "Active this week"
+          },
+          "flags": [],
+          "bias_pair": {
+            "group": "r2-gap",
+            "attribute": "caregiving career gap"
+          },
+          "interview_answers": {
+            "q1": {
+              "text": "“A cart-total rounding bug during a sale. I added property-based tests and a nightly reconciliation job.”"
+            }
+          },
+          "reference_quote": "“Vikram owns checkout end-to-end. Strong hire.” — EM, Coralbay",
+          "offer": {
+            "competing_offer_lpa": 34,
+            "accept_prob": {
+              "match": 0.85,
+              "middle": 0.7,
+              "hold": 0.45,
+              "perks": 0.6
+            },
+            "ghost_prob": 0.08
+          },
+          "true_quality": 78,
+          "is_best_hire": false,
+          "hire_outcome": "Strong senior IC — owned the payments module by month 4."
+        }
+      ]
+    },
+    {
+      "id": "r3-headops",
+      "title": "Head of Operations",
+      "level": "hard",
+      "seconds": 90,
+      "role_key": "head_operations",
+      "allow_blind": true,
+      "brief": [
+        "Final round: Head of Operations — 300+ people across 3 sites. Budget ₹55–75 LPA. A bad hire here costs ~₹45L.",
+        "Leadership CVs are polished. Red flags hide in tone, tenure maths and numbers that don't add up.",
+        "Optional: Blind Mode hides names, photos, age and institutes so you judge only the evidence."
+      ],
+      "rookie_tip": "Tip: check if the years of leadership add up to the graduation year, and listen to how people talk about their teams.",
+      "budget_lpa": {
+        "min": 55,
+        "max": 75
+      },
+      "bad_hire_cost_lpa": 45,
+      "questions": [
+        {
+          "id": "q1",
+          "text": "Walk me through a cost-reduction programme you led: baseline, levers, result, and who owned what.",
+          "kind": "structured"
+        },
+        {
+          "id": "q2",
+          "text": "Tell me about a time your team missed a major target. What did you do?",
+          "kind": "behavioral"
+        },
+        {
+          "id": "q3",
+          "text": "Map each leadership role to your graduation year and explain every move.",
+          "kind": "structured"
+        },
+        {
+          "id": "q4",
+          "text": "Describe a DMAIC project you ran — what was the defect metric and the control plan?",
+          "kind": "technical"
+        },
+        {
+          "id": "q5",
+          "text": "Why do you want to join us?",
+          "kind": "generic"
+        },
+        {
+          "id": "q6",
+          "text": "Confirm your notice period and current CTC for the offer letter.",
+          "kind": "structured"
+        }
+      ],
+      "aria_mistake": "ARIA scored Natasha 94 because her CV hits every leadership keyword ('transformation', 'P&L', 'scale'). But her interview language is dismissive of her teams and her notice/CTC numbers change between documents. ARIA also rated Karan 9 points above Rajesh — an identical profile — because Rajesh graduated 18 years earlier.",
+      "best_hire_explanation": "Farah's results are specific and attributed to her team (₹11Cr savings, 23% SLA improvement) and her job moves were all acquisitions. ARIA under-scored her because of 'frequent job changes'.",
+      "candidates": [
+        {
+          "id": "r3c1",
+          "name": "Natasha Kapoor",
+          "age": 41,
+          "title": "VP Operations, Stratus Mobility",
+          "location": "Gurugram",
+          "avatar": {
+            "skin": 1,
+            "hair": "long",
+            "hairColor": 3,
+            "accessory": "earrings",
+            "bg": 2
+          },
+          "roles": [
+            {
+              "title": "VP Operations",
+              "company": "Stratus Mobility",
+              "from": "2027-04",
+              "to": "present"
+            },
+            {
+              "title": "Director, Ops Excellence",
+              "company": "Trellis Quick Commerce",
+              "from": "2023-01",
+              "to": "2027-03"
+            },
+            {
+              "title": "Senior Manager, Operations",
+              "company": "Harbourline Logistics",
+              "from": "2017-06",
+              "to": "2022-12"
+            }
+          ],
+          "skills": [
+            "Ops transformation",
+            "P&L ownership",
+            "Scale-up leadership",
+            "Vendor management",
+            "Lean"
+          ],
+          "education": "MBA, Indus Institute of Management (Tier 1), 2014",
+          "blind_education": "MBA, 2014",
+          "aria_score": 94,
+          "aria_reason": "Full leadership keyword coverage: transformation, P&L, scale-up, Tier-1 MBA.",
+          "interview": {
+            "lines": [
+              "“I turned around operations that my predecessors — and frankly my team — had run into the ground.”",
+              "“I don't tolerate excuses. People either keep up or they're out.”"
+            ],
+            "sentiment": "Confident"
+          },
+          "details": {
+            "references": "Board member at Stratus (not direct manager)",
+            "notice_period": "Says 30 days · form says 90 days",
+            "salary_expectation_lpa": 85,
+            "current_ctc_lpa": 58,
+            "activity": "Interviewing with 4 companies"
+          },
+          "flags": [
+            {
+              "type": "culture_risk",
+              "explanation": "Takes credit for turnarounds and blames predecessors and her own team; 'people keep up or they're out' signals high attrition risk for a 300-person org."
+            },
+            {
+              "type": "inconsistent_info",
+              "explanation": "Notice period is 30 days in the interview and 90 days on the form; her ₹85 LPA ask is 47% above current and above the ₹75 LPA cap."
+            }
+          ],
+          "interview_answers": {
+            "q2": {
+              "text": "“Missed target? That happened under my predecessor. When my team misses, I replace the weak links. I let go of 40% of the leads in year one.”",
+              "reveals": "culture_risk"
+            },
+            "q6": {
+              "text": "“Current is around 72 fixed… well, 58 fixed plus variable. Notice is 90 days but I can negotiate.”",
+              "reveals": "inconsistent_info"
+            }
+          },
+          "reference_quote": "“Delivers numbers. Attrition in her org was 3x company average.” — Former HRBP, Trellis",
+          "offer": {
+            "competing_offer_lpa": 82,
+            "accept_prob": {
+              "match": 0.75,
+              "middle": 0.45,
+              "hold": 0.2,
+              "perks": 0.35
+            },
+            "ghost_prob": 0.3
+          },
+          "true_quality": 48,
+          "is_best_hire": false,
+          "hire_outcome": "Cut costs 8% in Q1; 3 site leads resigned by month 5; exited in month 11. Total cost ≈ ₹45L."
+        },
+        {
+          "id": "r3c2",
+          "name": "Vivek Choudhary",
+          "age": 37,
+          "title": "Head of Operations, Ganga Fresh Retail",
+          "location": "Noida",
+          "avatar": {
+            "skin": 2,
+            "hair": "short",
+            "hairColor": 1,
+            "accessory": "none",
+            "bg": 3
+          },
+          "roles": [
+            {
+              "title": "Head of Operations",
+              "company": "Ganga Fresh Retail",
+              "from": "2026-01",
+              "to": "present",
+              "note": "claims 400-person org"
+            },
+            {
+              "title": "Head of Operations",
+              "company": "Swiftcart Express",
+              "from": "2021-01",
+              "to": "2025-12"
+            },
+            {
+              "title": "Operations Manager",
+              "company": "Meridian Warehousing",
+              "from": "2019-01",
+              "to": "2020-12"
+            }
+          ],
+          "skills": [
+            "12+ yrs ops leadership",
+            "Supply chain",
+            "Warehousing",
+            "Six Sigma",
+            "Team building (400+)"
+          ],
+          "education": "BBA, Doon Valley Business School (Tier 2), 2018",
+          "blind_education": "BBA, 2018",
+          "aria_score": 88,
+          "aria_reason": "Two Head of Ops roles; '12+ years' and '400+ team' keywords.",
+          "interview": {
+            "lines": [
+              "“I've been leading operations for more than 12 years.”",
+              "“At Swiftcart I built the ops team from zero to 400.”"
+            ],
+            "sentiment": "Enthusiastic"
+          },
+          "details": {
+            "references": "Peer at Ganga Fresh",
+            "notice_period": "60 days",
+            "salary_expectation_lpa": 70,
+            "current_ctc_lpa": 52,
+            "activity": "Active this week"
+          },
+          "flags": [
+            {
+              "type": "fake_experience",
+              "explanation": "Claims '12+ years of ops leadership' but graduated in 2018 — that's at most ~13 years of total work, and he was a fresher manager in 2019. Head of Ops at 27 for a 400-person org is implausible."
+            },
+            {
+              "type": "title_inflation",
+              "explanation": "Swiftcart Express was a 40-person delivery startup during his tenure; 'Head of Operations' meant running one hub."
+            }
+          ],
+          "interview_answers": {
+            "q3": {
+              "text": "“Well — 12 years including internships and family business. Swiftcart was smaller when I joined… maybe 40 people. The 400 includes delivery partners.”",
+              "reveals": "fake_experience"
+            },
+            "q1": {
+              "text": "“We reduced costs a lot, maybe 20–30%. The finance team has the exact numbers.”"
+            }
+          },
+          "reference_quote": "“Vivek ran our Noida hub, about 35 people. Good on the floor.” — Former COO, Swiftcart",
+          "offer": {
+            "competing_offer_lpa": 65,
+            "accept_prob": {
+              "match": 0.85,
+              "middle": 0.7,
+              "hold": 0.5,
+              "perks": 0.6
+            },
+            "ghost_prob": 0.15
+          },
+          "true_quality": 50,
+          "is_best_hire": false,
+          "hire_outcome": "Strong floor manager, but out of depth at 300+ scale. Needed a COO hire above him."
+        },
+        {
+          "id": "r3c3",
+          "name": "Lakshmi Menon",
+          "age": 44,
+          "title": "Director, Business Excellence, Coastline Pharma",
+          "location": "Kochi (open to relocate)",
+          "avatar": {
+            "skin": 4,
+            "hair": "bun",
+            "hairColor": 4,
+            "accessory": "glasses",
+            "bg": 1
+          },
+          "roles": [
+            {
+              "title": "Director, Business Excellence",
+              "company": "Coastline Pharma",
+              "from": "2026-03",
+              "to": "present"
+            },
+            {
+              "title": "Senior Manager, Process",
+              "company": "Malabar Healthcare",
+              "from": "2020-02",
+              "to": "2026-02"
+            },
+            {
+              "title": "Manager, Quality",
+              "company": "Periyar Textiles",
+              "from": "2014-06",
+              "to": "2020-01"
+            }
+          ],
+          "skills": [
+            "Lean Six Sigma Black Belt",
+            "DMAIC",
+            "Kaizen",
+            "TQM",
+            "Operational excellence"
+          ],
+          "education": "M.Tech Industrial Eng., Southern Institute of Technology (Tier 1), 2012",
+          "blind_education": "M.Tech Industrial Engineering, 2012",
+          "aria_score": 83,
+          "aria_reason": "Black Belt certification + full process-excellence keyword set.",
+          "interview": {
+            "lines": [
+              "“I've championed a culture of continuous improvement across the enterprise.”",
+              "“My philosophy is that quality is everyone's responsibility.”"
+            ],
+            "sentiment": "Positive"
+          },
+          "details": {
+            "references": "Training institute certificate coordinator",
+            "notice_period": "90 days",
+            "salary_expectation_lpa": 62,
+            "current_ctc_lpa": 50,
+            "activity": "Applied via agency"
+          },
+          "flags": [
+            {
+              "type": "skill_mismatch",
+              "explanation": "Claims Black Belt + DMAIC, but can't name a defect metric, baseline or control plan for any project. The certification was a 5-day online course; her work was training delivery, not running ops."
+            },
+            {
+              "type": "keyword_stuffing",
+              "explanation": "Skills list is a glossary of process terms; interview answers are slogans with no numbers."
+            }
+          ],
+          "interview_answers": {
+            "q4": {
+              "text": "“DMAIC is Define, Measure, Analyze, Improve, Control. We applied it across functions to drive a quality mindset.” (No metric, no project named.)",
+              "reveals": "skill_mismatch"
+            },
+            "q1": {
+              "text": "“I enabled teams through Kaizen workshops. The savings were realised by the business units.”",
+              "reveals": "keyword_stuffing"
+            }
+          },
+          "reference_quote": "“Lakshmi delivered our Six Sigma training programme to 200 staff.” — L&D Head, Malabar Healthcare",
+          "offer": {
+            "competing_offer_lpa": 60,
+            "accept_prob": {
+              "match": 0.85,
+              "middle": 0.75,
+              "hold": 0.6,
+              "perks": 0.7
+            },
+            "ghost_prob": 0.08
+          },
+          "true_quality": 52,
+          "is_best_hire": false,
+          "hire_outcome": "Great trainer; struggled to run day-to-day operations. Moved to an L&D role in month 7."
+        },
+        {
+          "id": "r3c4",
+          "name": "Karan Arora",
+          "age": 33,
+          "title": "Senior Director, Operations, Nimbus Foods",
+          "location": "Delhi",
+          "avatar": {
+            "skin": 1,
+            "hair": "short",
+            "hairColor": 0,
+            "accessory": "none",
+            "bg": 4
+          },
+          "roles": [
+            {
+              "title": "Senior Director, Operations",
+              "company": "Nimbus Foods",
+              "from": "2026-05",
+              "to": "present"
+            },
+            {
+              "title": "Director, Operations",
+              "company": "Saltpan Logistics",
+              "from": "2023-02",
+              "to": "2026-04"
+            },
+            {
+              "title": "Operations Manager",
+              "company": "Kesari Retail",
+              "from": "2020-07",
+              "to": "2023-01"
+            }
+          ],
+          "skills": [
+            "Multi-site ops (250 people)",
+            "Cost optimisation",
+            "Vendor management",
+            "SLA design",
+            "Hiring & coaching"
+          ],
+          "education": "MBA Operations, Aravalli School of Management (Tier 2), 2020",
+          "blind_education": "MBA Operations, 2020",
+          "aria_score": 81,
+          "aria_reason": "Multi-site ops, recent leadership, high trajectory.",
+          "interview": {
+            "lines": [
+              "“My team cut cost-per-order by 14% in 18 months — mostly by redesigning shift rosters.”",
+              "“I spend a third of my week coaching site leads.”"
+            ],
+            "sentiment": "Positive"
+          },
+          "details": {
+            "references": "CEO at Nimbus + former reportee",
+            "notice_period": "60 days",
+            "salary_expectation_lpa": 68,
+            "current_ctc_lpa": 55,
+            "activity": "Referred by an employee"
+          },
+          "flags": [],
+          "bias_pair": {
+            "group": "r3-age",
+            "attribute": "age"
+          },
+          "interview_answers": {
+            "q1": {
+              "text": "“Baseline ₹38/order. Levers: roster redesign, vendor consolidation. Result ₹32.7/order. Site leads owned the rollout.”"
+            }
+          },
+          "reference_quote": "“Karan builds leaders under him. Reliable through peak season.” — CEO, Nimbus Foods",
+          "offer": {
+            "competing_offer_lpa": 70,
+            "accept_prob": {
+              "match": 0.8,
+              "middle": 0.65,
+              "hold": 0.4,
+              "perks": 0.55
+            },
+            "ghost_prob": 0.1
+          },
+          "true_quality": 76,
+          "is_best_hire": false,
+          "hire_outcome": "Solid leader; sites stable, cost targets met."
+        },
+        {
+          "id": "r3c5",
+          "name": "Farah Siddiqui",
+          "age": 39,
+          "title": "Head of Operations, Tessellate Health",
+          "location": "Noida",
+          "avatar": {
+            "skin": 3,
+            "hair": "hijab",
+            "hairColor": 0,
+            "accessory": "none",
+            "bg": 5
+          },
+          "roles": [
+            {
+              "title": "Head of Operations",
+              "company": "Tessellate Health",
+              "from": "2029-03",
+              "to": "present"
+            },
+            {
+              "title": "Director, Operations",
+              "company": "Medipath Diagnostics (acq. by Tessellate)",
+              "from": "2027-06",
+              "to": "2029-02"
+            },
+            {
+              "title": "Senior Manager, Operations",
+              "company": "Labnest (acq. by Medipath)",
+              "from": "2026-01",
+              "to": "2027-05"
+            }
+          ],
+          "skills": [
+            "320-person ops, 4 sites",
+            "Post-merger integration",
+            "SLA & quality systems",
+            "Cost programmes",
+            "Coaching managers"
+          ],
+          "education": "MBA, Ganga-Jamuni Institute of Management (Tier 2), 2016",
+          "blind_education": "MBA, 2016",
+          "aria_score": 78,
+          "aria_reason": "Relevant scale; 3 employers in 5 years lowers stability score.",
+          "interview": {
+            "lines": [
+              "“My team took ₹11 crore out of the cost base and improved SLA adherence by 23%.”",
+              "“The credit goes to four site leads I hired and coached.”"
+            ],
+            "sentiment": "Confident"
+          },
+          "details": {
+            "references": "CEO at Tessellate + 2 site leads",
+            "notice_period": "60 days",
+            "salary_expectation_lpa": 70,
+            "current_ctc_lpa": 60,
+            "activity": "Passive — sourced via referral"
+          },
+          "flags": [],
+          "suspicion": "3 employers in ~5 years",
+          "interview_answers": {
+            "q3": {
+              "text": "“2016 MBA. Labnest was acquired by Medipath in 2027, then Medipath by Tessellate in 2029 — I moved with each acquisition and integrated the teams.”",
+              "clears": "'Job hopping' was two acquisitions. Stable, not a flight risk."
+            },
+            "q1": {
+              "text": "“Baseline ₹96Cr ops cost. Levers: lab routing, reagent contracts, shift design. ₹11Cr saved, audited by finance. Site leads owned execution.”"
+            },
+            "q2": {
+              "text": "“We missed a turnaround-time SLA in monsoon 2030. I owned it publicly, rebuilt courier routing with the team, and we recovered in 6 weeks.”"
+            }
+          },
+          "reference_quote": "“Farah is the reason the merger didn't fall apart. Her team would follow her anywhere.” — CEO, Tessellate Health",
+          "offer": {
+            "competing_offer_lpa": 72,
+            "accept_prob": {
+              "match": 0.88,
+              "middle": 0.78,
+              "hold": 0.5,
+              "perks": 0.8
+            },
+            "ghost_prob": 0.05
+          },
+          "true_quality": 92,
+          "is_best_hire": true,
+          "hire_outcome": "Integrated 2 new sites in 6 months; attrition down 30%; promoted to COO track."
+        },
+        {
+          "id": "r3c6",
+          "name": "Rajesh Pillai",
+          "age": 51,
+          "title": "Senior Director, Operations, Coastal Kitchens",
+          "location": "Delhi",
+          "avatar": {
+            "skin": 4,
+            "hair": "bald",
+            "hairColor": 4,
+            "accessory": "glasses",
+            "bg": 0
+          },
+          "roles": [
+            {
+              "title": "Senior Director, Operations",
+              "company": "Coastal Kitchens",
+              "from": "2026-05",
+              "to": "present"
+            },
+            {
+              "title": "Director, Operations",
+              "company": "Tideline Freight",
+              "from": "2023-02",
+              "to": "2026-04"
+            },
+            {
+              "title": "Operations Manager",
+              "company": "Prakash Retail",
+              "from": "2020-07",
+              "to": "2023-01"
+            }
+          ],
+          "skills": [
+            "Multi-site ops (250 people)",
+            "Cost optimisation",
+            "Vendor management",
+            "SLA design",
+            "Hiring & coaching"
+          ],
+          "education": "MBA Operations, Aravalli School of Management (Tier 2), 2002",
+          "blind_education": "MBA Operations",
+          "aria_score": 72,
+          "aria_reason": "Relevant multi-site ops; older graduation year reduces 'growth trajectory' score.",
+          "interview": {
+            "lines": [
+              "“My team cut cost-per-order by 14% in 18 months — mostly by redesigning shift rosters.”",
+              "“I spend a third of my week coaching site leads.”"
+            ],
+            "sentiment": "Positive"
+          },
+          "details": {
+            "references": "CEO at Coastal Kitchens + former reportee",
+            "notice_period": "60 days",
+            "salary_expectation_lpa": 68,
+            "current_ctc_lpa": 55,
+            "activity": "Applied directly"
+          },
+          "flags": [],
+          "bias_pair": {
+            "group": "r3-age",
+            "attribute": "age"
+          },
+          "interview_answers": {
+            "q1": {
+              "text": "“Baseline ₹38/order. Levers: roster redesign, vendor consolidation. Result ₹32.7/order. Site leads owned the rollout.”"
+            }
+          },
+          "reference_quote": "“Rajesh builds leaders under him. Reliable through peak season.” — CEO, Coastal Kitchens",
+          "offer": {
+            "competing_offer_lpa": 70,
+            "accept_prob": {
+              "match": 0.85,
+              "middle": 0.72,
+              "hold": 0.5,
+              "perks": 0.65
+            },
+            "ghost_prob": 0.06
+          },
+          "true_quality": 76,
+          "is_best_hire": false,
+          "hire_outcome": "Solid leader; sites stable, cost targets met."
+        }
+      ]
+    }
+  ]
+}

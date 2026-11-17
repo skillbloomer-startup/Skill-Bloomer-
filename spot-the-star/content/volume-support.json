@@ -1,0 +1,707 @@
+{
+  "id": "volume-support",
+  "role": "Customer Support Associate (Voice + Chat)",
+  "seconds": 180,
+  "hires": 5,
+  "brief": [
+    "Volume Hiring Challenge: we're opening a new support floor and need 5 Customer Support Associates — fast.",
+    "30 candidates. 3 minutes. Hire 5, and 🚩 flag every red flag you see. Only red-flag accuracy counts.",
+    "Go! ⏱️"
+  ],
+  "cards": [
+    {
+      "id": "v01",
+      "name": "Aisha Khan",
+      "avatar": {
+        "skin": 0,
+        "hair": "hijab",
+        "hairColor": 0,
+        "accessory": "none",
+        "bg": 0
+      },
+      "title": "Customer Support Associate, Callnest",
+      "summary": "18 months handling billing queries; CSAT 4.6/5 on 9k tickets.",
+      "skills": [
+        "Voice support",
+        "Freshdesk",
+        "Hindi/English"
+      ],
+      "aria_score": 68,
+      "interview_line": "“I log every escalation with the root cause so the next agent doesn't repeat it.”",
+      "flags": []
+    },
+    {
+      "id": "v02",
+      "name": "Rohit Yadav",
+      "avatar": {
+        "skin": 1,
+        "hair": "curly",
+        "hairColor": 5,
+        "accessory": "glasses",
+        "bg": 1
+      },
+      "title": "Team Lead, Callnest & Team Lead, Hellodesk (2029–2031)",
+      "summary": "Lists two full-time team-lead roles at the same time in 2029–2031.",
+      "skills": [
+        "Team leadership",
+        "Voice support",
+        "Hindi/English"
+      ],
+      "aria_score": 80,
+      "interview_line": "“I managed both teams together.”",
+      "flags": [
+        {
+          "type": "fake_experience",
+          "explanation": "Two simultaneous full-time team-lead jobs at competing BPOs — dates overlap completely."
+        }
+      ]
+    },
+    {
+      "id": "v03",
+      "name": "Pooja Sharma",
+      "avatar": {
+        "skin": 2,
+        "hair": "hijab",
+        "hairColor": 4,
+        "accessory": "earrings",
+        "bg": 2
+      },
+      "title": "Chat Support Executive, Quickfix Home",
+      "summary": "1 year chat support, average handle time 6 min, top 10% QA scores.",
+      "skills": [
+        "Chat support",
+        "Zendesk",
+        "Typing 55 wpm"
+      ],
+      "aria_score": 70,
+      "interview_line": "“If I can't solve it in chat, I tell the customer exactly when they'll hear back.”",
+      "flags": []
+    },
+    {
+      "id": "v04",
+      "name": "Imran Sheikh",
+      "avatar": {
+        "skin": 3,
+        "hair": "short",
+        "hairColor": 3,
+        "accessory": "beard",
+        "bg": 3
+      },
+      "title": "Fresher, B.Com 2030",
+      "summary": "Final-year project on customer churn; volunteered at a helpline.",
+      "skills": [
+        "Communication",
+        "MS Excel",
+        "Hindi/English/Bengali"
+      ],
+      "aria_score": 78,
+      "interview_line": "“At the helpline I learnt to listen first and summarise back.”",
+      "flags": []
+    },
+    {
+      "id": "v05",
+      "name": "Deepika Rao",
+      "avatar": {
+        "skin": 4,
+        "hair": "long",
+        "hairColor": 2,
+        "accessory": "none",
+        "bg": 4
+      },
+      "title": "Customer Success Ninja",
+      "summary": "CX, NPS, CSAT, AHT, FCR, QA, WFM, CRM, SLA, omnichannel, AI chatbots, Six Sigma.",
+      "skills": [
+        "CSAT",
+        "NPS",
+        "AHT",
+        "FCR",
+        "Omnichannel"
+      ],
+      "aria_score": 77,
+      "interview_line": "“I'm passionate about customer delight and synergies.”",
+      "flags": [
+        {
+          "type": "keyword_stuffing",
+          "explanation": "CV is a list of metrics acronyms with no actual numbers or employers."
+        }
+      ]
+    },
+    {
+      "id": "v06",
+      "name": "Suresh Gowda",
+      "avatar": {
+        "skin": 5,
+        "hair": "turban",
+        "hairColor": 1,
+        "accessory": "glasses",
+        "bg": 5
+      },
+      "title": "Telecaller, Kiranmart",
+      "summary": "2 years outbound + inbound; promoted to buddy trainer.",
+      "skills": [
+        "Outbound calls",
+        "Objection handling",
+        "Kannada/Hindi/English"
+      ],
+      "aria_score": 60,
+      "interview_line": "“I trained 6 new joiners on our call script last quarter.”",
+      "flags": []
+    },
+    {
+      "id": "v07",
+      "name": "Neha Gupta",
+      "avatar": {
+        "skin": 0,
+        "hair": "bun",
+        "hairColor": 0,
+        "accessory": "earrings",
+        "bg": 0
+      },
+      "title": "Bilingual Support (English/French)",
+      "summary": "Claims fluent French for EU support queue.",
+      "skills": [
+        "French C1",
+        "English",
+        "Zendesk"
+      ],
+      "aria_score": 93,
+      "interview_line": "(Asked a French question) “Sorry, can we continue in English?”",
+      "flags": [
+        {
+          "type": "skill_mismatch",
+          "explanation": "Claims C1 French for a French queue but couldn't answer a basic question in French."
+        }
+      ]
+    },
+    {
+      "id": "v08",
+      "name": "Tenzin Dorje",
+      "avatar": {
+        "skin": 1,
+        "hair": "wavy",
+        "hairColor": 5,
+        "accessory": "beard",
+        "bg": 1
+      },
+      "title": "Retail Associate, Trendloop",
+      "summary": "Store floor sales, 3 years; handles returns and complaints.",
+      "skills": [
+        "Customer handling",
+        "POS",
+        "Marathi/Hindi"
+      ],
+      "aria_score": 61,
+      "interview_line": "“Angry customers mostly want to be heard — then fixed.”",
+      "flags": []
+    },
+    {
+      "id": "v09",
+      "name": "Ritu Singh",
+      "avatar": {
+        "skin": 2,
+        "hair": "short",
+        "hairColor": 4,
+        "accessory": "none",
+        "bg": 2
+      },
+      "title": "Support Associate, Ridewise",
+      "summary": "Ride-hailing driver support, night shifts, 14 months.",
+      "skills": [
+        "Voice support",
+        "Escalations",
+        "Tamil/English"
+      ],
+      "aria_score": 69,
+      "interview_line": "“Night shift is fine for me — I've done it for over a year.”",
+      "flags": []
+    },
+    {
+      "id": "v10",
+      "name": "Abhishek Das",
+      "avatar": {
+        "skin": 3,
+        "hair": "curly",
+        "hairColor": 3,
+        "accessory": "glasses",
+        "bg": 3
+      },
+      "title": "Support Associate, Ezybill",
+      "summary": "Form: notice 60 days, CTC ₹4.8L. Call: 'immediate joiner, ₹2.4L'.",
+      "skills": [
+        "Voice support",
+        "Billing",
+        "Hindi/English"
+      ],
+      "aria_score": 77,
+      "interview_line": "“I can join tomorrow.”",
+      "flags": [
+        {
+          "type": "inconsistent_info",
+          "explanation": "Notice period and CTC contradict between form and call."
+        }
+      ]
+    },
+    {
+      "id": "v11",
+      "name": "Fatima Ansari",
+      "avatar": {
+        "skin": 4,
+        "hair": "hijab",
+        "hairColor": 2,
+        "accessory": "earrings",
+        "bg": 4
+      },
+      "title": "Customer Support Associate, Callnest",
+      "summary": "18 months handling billing queries; CSAT 4.6/5 on 9k tickets.",
+      "skills": [
+        "Voice support",
+        "Freshdesk",
+        "Hindi/English"
+      ],
+      "aria_score": 74,
+      "interview_line": "“I log every escalation with the root cause so the next agent doesn't repeat it.”",
+      "flags": []
+    },
+    {
+      "id": "v12",
+      "name": "Gurpreet Kaur",
+      "avatar": {
+        "skin": 5,
+        "hair": "bun",
+        "hairColor": 1,
+        "accessory": "earrings",
+        "bg": 5
+      },
+      "title": "Senior Associate, Talkpoint",
+      "summary": "Strong numbers, but exit interview notes conflicts.",
+      "skills": [
+        "Voice support",
+        "Upselling",
+        "English"
+      ],
+      "aria_score": 82,
+      "interview_line": "“Customers are mostly stupid, you just have to handle them.”",
+      "flags": [
+        {
+          "type": "culture_risk",
+          "explanation": "Contemptuous language about customers — a direct risk in a support role."
+        }
+      ]
+    },
+    {
+      "id": "v13",
+      "name": "Manoj Patil",
+      "avatar": {
+        "skin": 0,
+        "hair": "bald",
+        "hairColor": 0,
+        "accessory": "none",
+        "bg": 0
+      },
+      "title": "Chat Support Executive, Quickfix Home",
+      "summary": "1 year chat support, average handle time 6 min, top 10% QA scores.",
+      "skills": [
+        "Chat support",
+        "Zendesk",
+        "Typing 55 wpm"
+      ],
+      "aria_score": 59,
+      "interview_line": "“If I can't solve it in chat, I tell the customer exactly when they'll hear back.”",
+      "flags": []
+    },
+    {
+      "id": "v14",
+      "name": "Anjali Mishra",
+      "avatar": {
+        "skin": 1,
+        "hair": "long",
+        "hairColor": 5,
+        "accessory": "glasses",
+        "bg": 1
+      },
+      "title": "Fresher, B.Com 2030",
+      "summary": "Final-year project on customer churn; volunteered at a helpline.",
+      "skills": [
+        "Communication",
+        "MS Excel",
+        "Hindi/English/Bengali"
+      ],
+      "aria_score": 60,
+      "interview_line": "“At the helpline I learnt to listen first and summarise back.”",
+      "flags": []
+    },
+    {
+      "id": "v15",
+      "name": "Joseph Thomas",
+      "avatar": {
+        "skin": 2,
+        "hair": "short",
+        "hairColor": 4,
+        "accessory": "beard",
+        "bg": 2
+      },
+      "title": "Head of Customer Experience, Chaiwala Express (3 staff)",
+      "summary": "'Head of CX' at a 3-person tea stall startup, 1 year.",
+      "skills": [
+        "Leadership",
+        "Customer experience",
+        "Instagram"
+      ],
+      "aria_score": 89,
+      "interview_line": "“I headed all customer experience.”",
+      "flags": [
+        {
+          "type": "title_inflation",
+          "explanation": "'Head of CX' at a 3-person café; scope was answering Instagram DMs."
+        }
+      ]
+    },
+    {
+      "id": "v16",
+      "name": "Swati Jain",
+      "avatar": {
+        "skin": 3,
+        "hair": "wavy",
+        "hairColor": 3,
+        "accessory": "earrings",
+        "bg": 3
+      },
+      "title": "Telecaller, Kiranmart",
+      "summary": "2 years outbound + inbound; promoted to buddy trainer.",
+      "skills": [
+        "Outbound calls",
+        "Objection handling",
+        "Kannada/Hindi/English"
+      ],
+      "aria_score": 71,
+      "interview_line": "“I trained 6 new joiners on our call script last quarter.”",
+      "flags": []
+    },
+    {
+      "id": "v17",
+      "name": "Harish Kumar",
+      "avatar": {
+        "skin": 4,
+        "hair": "short",
+        "hairColor": 2,
+        "accessory": "none",
+        "bg": 4
+      },
+      "title": "Team Lead, Callnest & Team Lead, Hellodesk (2029–2031)",
+      "summary": "Lists two full-time team-lead roles at the same time in 2029–2031.",
+      "skills": [
+        "Team leadership",
+        "Voice support",
+        "Hindi/English"
+      ],
+      "aria_score": 78,
+      "interview_line": "“I managed both teams together.”",
+      "flags": [
+        {
+          "type": "fake_experience",
+          "explanation": "Two simultaneous full-time team-lead jobs at competing BPOs — dates overlap completely."
+        }
+      ]
+    },
+    {
+      "id": "v18",
+      "name": "Nandini Bose",
+      "avatar": {
+        "skin": 5,
+        "hair": "curly",
+        "hairColor": 1,
+        "accessory": "glasses",
+        "bg": 5
+      },
+      "title": "Retail Associate, Trendloop",
+      "summary": "Store floor sales, 3 years; handles returns and complaints.",
+      "skills": [
+        "Customer handling",
+        "POS",
+        "Marathi/Hindi"
+      ],
+      "aria_score": 65,
+      "interview_line": "“Angry customers mostly want to be heard — then fixed.”",
+      "flags": []
+    },
+    {
+      "id": "v19",
+      "name": "Salman Qureshi",
+      "avatar": {
+        "skin": 0,
+        "hair": "short",
+        "hairColor": 0,
+        "accessory": "beard",
+        "bg": 0
+      },
+      "title": "Support Associate, Ridewise",
+      "summary": "Ride-hailing driver support, night shifts, 14 months.",
+      "skills": [
+        "Voice support",
+        "Escalations",
+        "Tamil/English"
+      ],
+      "aria_score": 60,
+      "interview_line": "“Night shift is fine for me — I've done it for over a year.”",
+      "flags": []
+    },
+    {
+      "id": "v20",
+      "name": "Divya Pillai",
+      "avatar": {
+        "skin": 1,
+        "hair": "long",
+        "hairColor": 5,
+        "accessory": "earrings",
+        "bg": 1
+      },
+      "title": "Customer Success Ninja",
+      "summary": "CX, NPS, CSAT, AHT, FCR, QA, WFM, CRM, SLA, omnichannel, AI chatbots, Six Sigma.",
+      "skills": [
+        "CSAT",
+        "NPS",
+        "AHT",
+        "FCR",
+        "Omnichannel"
+      ],
+      "aria_score": 93,
+      "interview_line": "“I'm passionate about customer delight and synergies.”",
+      "flags": [
+        {
+          "type": "keyword_stuffing",
+          "explanation": "CV is a list of metrics acronyms with no actual numbers or employers."
+        }
+      ]
+    },
+    {
+      "id": "v21",
+      "name": "Akash Chauhan",
+      "avatar": {
+        "skin": 2,
+        "hair": "bald",
+        "hairColor": 4,
+        "accessory": "none",
+        "bg": 2
+      },
+      "title": "Customer Support Associate, Callnest",
+      "summary": "18 months handling billing queries; CSAT 4.6/5 on 9k tickets.",
+      "skills": [
+        "Voice support",
+        "Freshdesk",
+        "Hindi/English"
+      ],
+      "aria_score": 71,
+      "interview_line": "“I log every escalation with the root cause so the next agent doesn't repeat it.”",
+      "flags": []
+    },
+    {
+      "id": "v22",
+      "name": "Preeti Saxena",
+      "avatar": {
+        "skin": 3,
+        "hair": "long",
+        "hairColor": 3,
+        "accessory": "glasses",
+        "bg": 3
+      },
+      "title": "Chat Support Executive, Quickfix Home",
+      "summary": "1 year chat support, average handle time 6 min, top 10% QA scores.",
+      "skills": [
+        "Chat support",
+        "Zendesk",
+        "Typing 55 wpm"
+      ],
+      "aria_score": 59,
+      "interview_line": "“If I can't solve it in chat, I tell the customer exactly when they'll hear back.”",
+      "flags": []
+    },
+    {
+      "id": "v23",
+      "name": "Wasim Akram Shaikh",
+      "avatar": {
+        "skin": 4,
+        "hair": "short",
+        "hairColor": 2,
+        "accessory": "beard",
+        "bg": 4
+      },
+      "title": "Bilingual Support (English/French)",
+      "summary": "Claims fluent French for EU support queue.",
+      "skills": [
+        "French C1",
+        "English",
+        "Zendesk"
+      ],
+      "aria_score": 79,
+      "interview_line": "(Asked a French question) “Sorry, can we continue in English?”",
+      "flags": [
+        {
+          "type": "skill_mismatch",
+          "explanation": "Claims C1 French for a French queue but couldn't answer a basic question in French."
+        }
+      ]
+    },
+    {
+      "id": "v24",
+      "name": "Lalitha Krishnan",
+      "avatar": {
+        "skin": 5,
+        "hair": "wavy",
+        "hairColor": 1,
+        "accessory": "earrings",
+        "bg": 5
+      },
+      "title": "Fresher, B.Com 2030",
+      "summary": "Final-year project on customer churn; volunteered at a helpline.",
+      "skills": [
+        "Communication",
+        "MS Excel",
+        "Hindi/English/Bengali"
+      ],
+      "aria_score": 65,
+      "interview_line": "“At the helpline I learnt to listen first and summarise back.”",
+      "flags": []
+    },
+    {
+      "id": "v25",
+      "name": "Yash Thakur",
+      "avatar": {
+        "skin": 0,
+        "hair": "short",
+        "hairColor": 0,
+        "accessory": "none",
+        "bg": 0
+      },
+      "title": "Support Associate, Ezybill",
+      "summary": "Form: notice 60 days, CTC ₹4.8L. Call: 'immediate joiner, ₹2.4L'.",
+      "skills": [
+        "Voice support",
+        "Billing",
+        "Hindi/English"
+      ],
+      "aria_score": 77,
+      "interview_line": "“I can join tomorrow.”",
+      "flags": [
+        {
+          "type": "inconsistent_info",
+          "explanation": "Notice period and CTC contradict between form and call."
+        }
+      ]
+    },
+    {
+      "id": "v26",
+      "name": "Ishita Banerjee",
+      "avatar": {
+        "skin": 1,
+        "hair": "curly",
+        "hairColor": 5,
+        "accessory": "glasses",
+        "bg": 1
+      },
+      "title": "Telecaller, Kiranmart",
+      "summary": "2 years outbound + inbound; promoted to buddy trainer.",
+      "skills": [
+        "Outbound calls",
+        "Objection handling",
+        "Kannada/Hindi/English"
+      ],
+      "aria_score": 76,
+      "interview_line": "“I trained 6 new joiners on our call script last quarter.”",
+      "flags": []
+    },
+    {
+      "id": "v27",
+      "name": "Ravi Teja",
+      "avatar": {
+        "skin": 2,
+        "hair": "short",
+        "hairColor": 4,
+        "accessory": "beard",
+        "bg": 2
+      },
+      "title": "Retail Associate, Trendloop",
+      "summary": "Store floor sales, 3 years; handles returns and complaints.",
+      "skills": [
+        "Customer handling",
+        "POS",
+        "Marathi/Hindi"
+      ],
+      "aria_score": 76,
+      "interview_line": "“Angry customers mostly want to be heard — then fixed.”",
+      "flags": []
+    },
+    {
+      "id": "v28",
+      "name": "Shabnam Begum",
+      "avatar": {
+        "skin": 3,
+        "hair": "hijab",
+        "hairColor": 3,
+        "accessory": "earrings",
+        "bg": 3
+      },
+      "title": "Senior Associate, Talkpoint",
+      "summary": "Strong numbers, but exit interview notes conflicts.",
+      "skills": [
+        "Voice support",
+        "Upselling",
+        "English"
+      ],
+      "aria_score": 88,
+      "interview_line": "“Customers are mostly stupid, you just have to handle them.”",
+      "flags": [
+        {
+          "type": "culture_risk",
+          "explanation": "Contemptuous language about customers — a direct risk in a support role."
+        }
+      ]
+    },
+    {
+      "id": "v29",
+      "name": "Nikhil Joshi",
+      "avatar": {
+        "skin": 4,
+        "hair": "bald",
+        "hairColor": 2,
+        "accessory": "none",
+        "bg": 4
+      },
+      "title": "Support Associate, Ridewise",
+      "summary": "Ride-hailing driver support, night shifts, 14 months.",
+      "skills": [
+        "Voice support",
+        "Escalations",
+        "Tamil/English"
+      ],
+      "aria_score": 59,
+      "interview_line": "“Night shift is fine for me — I've done it for over a year.”",
+      "flags": []
+    },
+    {
+      "id": "v30",
+      "name": "Ruth Lalremsiami",
+      "avatar": {
+        "skin": 5,
+        "hair": "long",
+        "hairColor": 1,
+        "accessory": "glasses",
+        "bg": 5
+      },
+      "title": "Head of Customer Experience, Chaiwala Express (3 staff)",
+      "summary": "'Head of CX' at a 3-person tea stall startup, 1 year.",
+      "skills": [
+        "Leadership",
+        "Customer experience",
+        "Instagram"
+      ],
+      "aria_score": 83,
+      "interview_line": "“I headed all customer experience.”",
+      "flags": [
+        {
+          "type": "title_inflation",
+          "explanation": "'Head of CX' at a 3-person café; scope was answering Instagram DMs."
+        }
+      ]
+    }
+  ]
+}

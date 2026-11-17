@@ -1,0 +1,44 @@
+[
+  {
+    "id": "scrini",
+    "name": "Scrini AI",
+    "logo_url": "/sponsors/scrini.svg",
+    "click_url": "https://scrini.ai/?utm_source=spot_the_star&utm_medium=game&utm_campaign=recruiter2031",
+    "tagline": "The Agentic Hiring OS",
+    "headline": "Let AI agents source, screen and schedule. You make the call.",
+    "cta": "Book a demo",
+    "slots": ["splash", "wall", "ats_header", "transition", "round_reveal", "results_native", "share_footer", "lesson"],
+    "start": "2026-01-01",
+    "end": "2099-12-31",
+    "priority": 0,
+    "active": true
+  },
+  {
+    "id": "demo-verifynow",
+    "name": "VerifyNow BGV (demo sponsor)",
+    "logo_url": "/sponsors/verifynow.svg",
+    "click_url": "https://example.com/verifynow?utm_source=spot_the_star&utm_medium=sponsor",
+    "tagline": "Background checks in 48 hours",
+    "headline": "Catch fake experience before day one.",
+    "cta": "Learn more",
+    "slots": ["wall", "lesson", "round_reveal"],
+    "start": "2026-01-01",
+    "end": "2099-12-31",
+    "priority": 10,
+    "active": false
+  },
+  {
+    "id": "demo-skillgrid",
+    "name": "SkillGrid Assessments (demo sponsor)",
+    "logo_url": "/sponsors/skillgrid.svg",
+    "click_url": "https://example.com/skillgrid?utm_source=spot_the_star&utm_medium=sponsor",
+    "tagline": "Skills-first hiring tests",
+    "headline": "Test the skill, not the keyword.",
+    "cta": "Try free",
+    "slots": ["wall", "transition", "results_native", "ats_header"],
+    "start": "2026-01-01",
+    "end": "2099-12-31",
+    "priority": 5,
+    "active": false
+  }
+]

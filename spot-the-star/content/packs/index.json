@@ -1,0 +1,7 @@
+{
+  "default": "core-2031",
+  "packs": [
+    { "id": "core-2031", "file": "core-2031.json", "name": "Core 2031 — Mixed Roles", "industry": "IT / SaaS", "enabled": true }
+  ],
+  "volume": "volume-support"
+}
